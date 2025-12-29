@@ -37,7 +37,7 @@ If anything breaks or behaves unexpectedly, Grix is there to guide you through d
 Everything is tuned for smooth gameplay and responsiveness:
 
 <div align="center">
-  <img src="https://github.com/bobbycomet/Griffin-Linux-Landing-Page/blob/main/ControllerHub.png" alt="Griffin Linux" width="50%"/>
+  <img src="https://github.com/bobbycomet/Griffin-Linux-Landing-Page/blob/main/ControllerHub.png" alt="Griffin Linux" width="25%"/>
 </div>
 
 - **ControllerHub** – Auto-detects Xbox, PlayStation, Nintendo, wheels — applies optimal profiles and firmware.
