@@ -1,22 +1,2 @@
 # Required for remote theme
-remote_theme: pages-themes/midnight@v0.2.0
-
-# Enable the remote theme plugin (required by GitHub Pages)
-plugins:
-  - jekyll-remote-theme
-
-# Site settings – customized for Griffin Linux
-title: Griffin Linux
-tagline: The Smartest Way to Switch from Windows
-description: >-
-  A beginner-friendly, gaming-optimized Linux distribution based on Linux Mint.
-  Perfect for Windows switchers seeking a familiar feel, seamless migration, and no bloat.
-  Gamers get out-of-the-box performance tools and controller support.
-  Productivity users enjoy intuitive GUIs and bundles.
-  Power users gain deep customization, advanced kernel management, and a local AI assistant (Grix) for troubleshooting and automation.
-
-# Optional but recommended
-show_downloads: false  # Hide download buttons since it's pre-release ("Coming soon in 2026")
-
-github:
-  is_project_page: false
+theme: pages-themes/midnight
