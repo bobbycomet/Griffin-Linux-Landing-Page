@@ -22,7 +22,7 @@ Whether you're gaming on the latest RTX hardware, migrating your files and proje
 ### Grix – Your Built-in AI Assistant
 
 <div align="center">
-  <img src="Grix.png" alt="Grix - Your AI friend" width="60%"/>
+  <img src="Grix.png" alt="Grix - Your AI friend" width="25%"/>
   <p><i>Your AI friend.</i></p>
 </div>
 
