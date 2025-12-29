@@ -26,7 +26,7 @@ The ultimate system-aware companion (what Copilot wishes it could be).
 - Opt-in Python plugins for advanced users
 - Deeply integrated with Griffin tools for maximum intelligence
 Fully local voice processing + multi-model AI support.
-If anything breaks or behaves unexpectedly, Grix is there to guide you through diagnosis and recovery.
+If anything breaks or behaves unexpectedly, Grix is there to guide you through diagnosis and recovery. 
 
 ### Gaming & Performance Suite
 Everything is tuned for smooth gameplay and responsiveness:
