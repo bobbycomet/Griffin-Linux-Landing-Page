@@ -1,0 +1,19 @@
+---
+--- // Empty front matter required for Jekyll
+
+@import "{{ site.theme }}";
+
+// Custom gamer accents (easy on eyes)
+$accent-color: #bb86fc;  // Soft purple
+$link-color: #03dac6;    // Teal/cyan
+
+a {
+  color: $link-color;
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+header, footer {
+  background: #0d1117;  // Deeper black
+}
