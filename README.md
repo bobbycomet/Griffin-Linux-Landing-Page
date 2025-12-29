@@ -90,7 +90,7 @@ Seamless transition from Windows:
 - **Griffin Migrate** – GUI tool to transfer files, settings, and projects (including Unity/Unreal).
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/bobbycomet/Appify/main/Extensionsview.png" alt="Extensions View" width="80%"/>
+  <img src="https://raw.githubusercontent.com/bobbycomet/Appify/main/Appify.png" alt="Extensions View" width="80%"/>
 </div>
 
 - **Appify** – Turn any website into an isolated, native-feeling desktop app (Gmail, Twitch, Discord, cloud gaming). https://github.com/bobbycomet/Appify
