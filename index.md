@@ -57,7 +57,7 @@ No more forum hunting:
 <div align="center">
   <img src="https://raw.githubusercontent.com/bobbycomet/Griffin-Linux-Landing-Page/main/com.xanmod.kernel.manager.png" alt="Xanmod Kernel Manager" width="25%"/>
 </div>
-- **XKM** – Manages Xanmod, Liquorix, and Mainline kernels. Installs Xanmod and Liquorix PPAs, removes or installs kernels with DKMS rebuilds, cleans up unused kernels (can be turned off). https://github.com/bobbycomet/XKM-Multi-Kernel-Manager
+- **XKM** – Manages Xanmod, Liquorix, and Mainline kernels. Installs Xanmod and Liquorix PPAs, removes or installs kernels with DKMS rebuilds, and cleans up unused kernels (can be turned off). https://github.com/bobbycomet/XKM-Multi-Kernel-Manager
 
 ### Migration & Productivity
 Seamless transition from Windows:
