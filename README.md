@@ -22,7 +22,7 @@ Whether you're gaming on the latest RTX hardware, migrating your files and proje
 ### Grix – Your Built-in AI Assistant
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/bobbycomet/Griffin-Linux-Landing-Page/main/Grix.png" alt="Griffin Linux" width="20%"/>
+  <img src="Grix.png" alt="Grix - Your AI friend" width="60%"/>
   <p><i>Your AI friend.</i></p>
 </div>
 
