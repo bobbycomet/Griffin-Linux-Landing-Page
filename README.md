@@ -36,6 +36,10 @@ If anything breaks or behaves unexpectedly, Grix is there to guide you through d
 ### Gaming & Performance Suite
 Everything is tuned for smooth gameplay and responsiveness:
 
+<div align="center">
+  <img src="https://github.com/bobbycomet/Griffin-Linux-Landing-Page/blob/main/ControllerHub.png" alt="Griffin Linux" width="50%"/>
+</div>
+
 - **ControllerHub** – Auto-detects Xbox, PlayStation, Nintendo, wheels — applies optimal profiles and firmware.
 - **FanHub** – Windows-style fan curves, profiles, and OpenRGB integration.
 - **CpuHub** – Easy CPU governor control (performance, balanced, powersave).
