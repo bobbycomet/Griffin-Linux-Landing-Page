@@ -41,7 +41,17 @@ Everything is tuned for smooth gameplay and responsiveness:
 </div>
 
 - **ControllerHub** – Auto-detects Xbox, PlayStation, Nintendo, wheels — applies optimal profiles and firmware.
+
+<div align="center">
+  <img src="https://github.com/bobbycomet/Griffin-Linux-Landing-Page/blob/main/FanHub.png" alt="Griffin Linux" width="25%"/>
+</div>
+
 - **FanHub** – Windows-style fan curves, profiles, and OpenRGB integration.
+
+<div align="center">
+  <img src="https://github.com/bobbycomet/Griffin-Linux-Landing-Page/blob/main/CPUHub.png" alt="Griffin Linux" width="25%"/>
+</div>
+
 - **CpuHub** – Easy CPU governor control (performance, balanced, powersave).
 - **Sentry** – Smart resource manager using cgroups; learns your habits for smoother multitasking. Includes editable `config.yaml` for advanced users to customize or reverse settings.
 - **Auto-Gamemode** – Automatically activates optimizations when launching Steam, Lutris, or Heroic, and triggers Sentry to intelligently throttle background tasks for stutter-free gaming.
@@ -51,18 +61,46 @@ Everything is tuned for smooth gameplay and responsiveness:
 ### Hardware, Kernel, & Driver Tools
 No more forum hunting:
 
+<div align="center">
+  <img src="https://github.com/bobbycomet/Griffin-Linux-Landing-Page/blob/main/realtekhub.png" alt="Griffin Linux" width="25%"/>
+</div>
+
 - **RealtekHub** – Dedicated GUI to fix notorious Realtek WiFi issues.
 - **Universal GPU Installer** – Automatically adds latest PPAs and installs optimal drivers for **NVIDIA** (RTX 50-series ready), **AMD** (RDNA4 support), and **Intel**. Detects hardware brand switches and adapts accordingly for seamless transitions.
+
+<div align="center">
+  <img src="https://github.com/bobbycomet/Griffin-Linux-Landing-Page/blob/main/com.xanmod.kernel.manager.png" alt="Griffin Linux" width="25%"/>
+</div>
+
 - **XKM** – Manages Xanmod, Liquorix, and Mainline kernels. Installs Xanmod and Liquorix PPAs, removes or installs kernels with DKMS rebuilds, cleans up unused kernels (can be turned off). https://github.com/bobbycomet/XKM-Multi-Kernel-Manager
 
 ### Migration & Productivity
 Seamless transition from Windows:
 
+<div align="center">
+  <img src="https://github.com/bobbycomet/Griffin-Linux-Landing-Page/blob/main/migrate.png" alt="Griffin Linux" width="25%"/>
+</div>
+
 - **Griffin Migrate** – GUI tool to transfer files, settings, and projects (including Unity/Unreal).
+
+<div align="center">
+  <img src="https://github.com/bobbycomet/Griffin-Linux-Landing-Page/blob/main/Appify.png" alt="Griffin Linux" width="25%"/>
+</div>
+
 - **Appify** – Turn any website into an isolated, native-feeling desktop app (Gmail, Twitch, Discord, cloud gaming). https://github.com/bobbycomet/Appify
+
+<div align="center">
+  <img src="https://github.com/bobbycomet/Griffin-Linux-Landing-Page/blob/main/postinstaller.png" alt="Griffin Linux" width="25%"/>
+</div>
+
 - **Postinstaller** – One-click category bundles (Gaming, Productivity, Audio, System Tools) — everything you need, instantly.
 
 ### Dashboard
+
+<div align="center">
+  <img src="https://github.com/bobbycomet/Griffin-Linux-Landing-Page/blob/main/dashboard.png" alt="Griffin Linux" width="25%"/>
+</div>
+
 **Griffin Dashboard** – Real-time Task Manager-like system monitor with per-core and temps CPU graphs, GPU stats and temps, Disk use, RAM use, and process management.
 
 ## Editions
