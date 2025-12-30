@@ -76,7 +76,7 @@ Seamless transition from Windows:
 
 ### Dashboard
 <div align="center">
-  <img src="https://raw.githubusercontent.com/bobbycomet/Griffin-Linux-Landing-Page/main/dashboard.png" alt="Griffin Dashboard" width="25%"/>
+  <img src="https://raw.githubusercontent.com/bobbycomet/Griffin-Linux-Landing-Page/main/griffindashboard.png" alt="Griffin Dashboard" width="25%"/>
 </div>
 **Griffin Dashboard** – Real-time Task Manager-like system monitor with per-core and temps CPU graphs, GPU stats and temps, Disk use, RAM use, and process management.
 
