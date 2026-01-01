@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="griffinlinux.png" alt="Griffin Linux" width="25%"/>
+  <img src="griffinlinux.png" alt="Griffin Linux" width="50%"/>
 </div>
 
 # Griffin Linux – The Smartest Way to Switch from Windows **Coming soon in 2026.**
