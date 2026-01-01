@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="griffinlinux.png" alt="Griffin Linux" width="50%"/>
+  <img src="griffinlinux.png" alt="Griffin Linux" width="70%"/>
 </div>
 
 # Griffin Linux – The Smartest Way to Switch from Windows **Coming soon in 2026.**
@@ -44,7 +44,7 @@ All editions include the same powerful Griffin tools and curated repository. Gri
 ### Grix – Your Built-in AI Assistant
 
 <div align="center">
-  <img src="Grix.png" alt="Grix - Your AI friend" width="25%"/>
+  <img src="Grix.png" alt="Grix - Your AI friend" width="40%"/>
   <p><i>Your AI friend.</i></p>
 </div>
 
