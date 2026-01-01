@@ -90,7 +90,7 @@ Everything is tuned for smooth gameplay and responsiveness:
 No more forum hunting:
 
 <div align="center">
-  <img src="realtekhub.png" alt="Griffin Linux" width="25%"/>
+  <img src="realtekhub.png" alt="realtekhub" width="25%"/>
 </div>
 
 - **RealtekHub** – Dedicated GUI to fix notorious Realtek WiFi issues.
