@@ -56,7 +56,9 @@ The ultimate system-aware companion (what Copilot wishes it could be).
 - Teaches Linux step-by-step
 - Securely installs packages (apt & Flatpak)
 - Opt-in Python plugins for advanced users
+- Plugin scanning for malicious code
 - Deeply integrated with Griffin tools for maximum intelligence
+- PC health checking
 
 Fully local voice processing + multi-model AI support.  
 If anything breaks or behaves unexpectedly, Grix is there to guide you through diagnosis and recovery.
