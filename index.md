@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="griffinlinux.png" alt="Griffin Linux" width="50%"/>
+  <img src="griffinlinux.png" alt="Griffin Linux" width="70%"/>
 </div>
 
 # Griffin Linux – The Smartest Way to Switch from Windows **Coming soon in 2026.**
@@ -44,7 +44,7 @@ All editions include the same powerful Griffin tools and curated repository. Gri
 ### Grix – Your Built-in AI Assistant
 
 <div align="center">
-  <img src="Grix.png" alt="Grix - Your AI friend" width="25%"/>
+  <img src="Grix.png" alt="Grix - Your AI friend" width="40%"/>
   <p><i>Your AI friend.</i></p>
 </div>
 
@@ -56,7 +56,9 @@ The ultimate system-aware companion (what Copilot wishes it could be).
 - Teaches Linux step-by-step
 - Securely installs packages (apt & Flatpak)
 - Opt-in Python plugins for advanced users
+- Plugin scanning for malicious code
 - Deeply integrated with Griffin tools for maximum intelligence
+- PC health checking and more
 
 Fully local voice processing + multi-model AI support.  
 If anything breaks or behaves unexpectedly, Grix is there to guide you through diagnosis and recovery.
