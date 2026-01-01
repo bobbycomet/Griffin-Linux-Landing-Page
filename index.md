@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="griffinlinux.png" alt="Griffin Linux" width="25%"/>
+  <img src="griffinlinux.png" alt="Griffin Linux" width="50%"/>
 </div>
 
 # Griffin Linux – The Smartest Way to Switch from Windows **Coming soon in 2026.**
@@ -90,7 +90,7 @@ Everything is tuned for smooth gameplay and responsiveness:
 No more forum hunting:
 
 <div align="center">
-  <img src="realtekhub.png" alt="realtekhub" width="25%"/>
+  <img src="realtekhub.png" alt="Griffin Linux" width="25%"/>
 </div>
 
 - **RealtekHub** – Dedicated GUI to fix notorious Realtek WiFi issues.
