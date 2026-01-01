@@ -37,7 +37,7 @@ All editions include the same powerful Griffin tools and curated repository. Gri
 - No telemetry, ads, or forced updates
 - Built on proven Linux Mint stability
 - Completely free and community-driven
-
+ 
 
 ## Key Features
 
