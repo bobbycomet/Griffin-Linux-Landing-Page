@@ -111,13 +111,25 @@ Seamless transition from Windows:
 
 ## Editions
 
-| Edition              | Desktop Environment | Best For                              | Default Theme                     |
-|----------------------|---------------------|---------------------------------------|-----------------------------------|
-| **Cinnamon (Flagship)** | Linux Mint Cinnamon | Everyday use, Windows 7/10 feel      | Classic taskbar + modern accents |
-| **XFCE**             | XFCE                | Older hardware, low resource usage   | Clean and lightweight            |
-| **KDE**              | KDE Plasma          | Modern Windows 11 look & customization | Windows 11-inspired layout       |
+**Cinnamon (Flagship)**
+- Griffin OS based on Linux Mint Cinnamon
+- Everyday use, Windows 7/10 feel
+- Classic taskbar + modern accents
+- mutable (full terminal use for Linux purists)
 
-All editions include the same powerful Griffin tools and curated repository.
+**XFCE**
+- Griffin Aerie based on Linux Mint XFCE
+- Older hardware, low resource usage
+- Clean and lightweight
+- mutable (full terminal use for Linux purists)
+
+**KDE**
+- Talon based on Kubuntu KDE Plasma
+- Modern Windows 11 look & customization
+- Windows 11-inspired layout
+- mutable (full terminal use for Linux purists)
+
+All editions include the same powerful Griffin tools and curated repository. Grix will have a lighter version for older hardware and laptops, cloud-only AI models.
 
 ## Why Choose Griffin Linux?
 
