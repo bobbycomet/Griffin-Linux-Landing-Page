@@ -50,20 +50,20 @@ All editions include the same powerful Griffin tools and curated repository. Gri
 
 The ultimate system-aware companion (what Copilot wishes it could be).
 
--Voice-activated ("Hey Grix")
--Zero telemetry — nothing leaves your machine unless you use cloud AI.
--Local-first — full functionality with local Ollama models.
--No web search — avoids hallucinations; sticks to facts from your documents, system
--Personal Knowledge Base (RAG) 
--You own your data — all notes, todos, reminders, knowledge base stored plainly in ~/Notes/Grix and ~/.config/grix.data, and curated knowledge.
--System Awareness & Proactive Help
--Suggests and applies fixes with your approval
--Securely installs packages (apt, PIP & Flatpak)
--Learning & Education. Teaches Linux step-by-step
--System Diagnostics & Health
--Opt-in Python plugins for advanced users
--Advanced static safety scanner (AST-based). Plugin scanning for malicious code
--Hardened command confirmation mode (toggle in settings)
+- Voice-activated ("Hey Grix")
+- Zero telemetry — nothing leaves your machine unless you use cloud AI.
+- Local-first — full functionality with local Ollama models.
+- No web search — avoids hallucinations; sticks to facts from your documents, system
+- Personal Knowledge Base (RAG) 
+- You own your data — all notes, todos, reminders, knowledge base stored plainly in ~/Notes/Grix and ~/.config/grix.data, and curated knowledge.
+- System Awareness & Proactive Help
+- Suggests and applies fixes with your approval
+- Securely installs packages (apt, PIP & Flatpak)
+- Learning & Education. Teaches Linux step-by-step
+- System Diagnostics & Health
+- Opt-in Python plugins for advanced users
+- Advanced static safety scanner (AST-based). Plugin scanning for malicious code
+- Hardened command confirmation mode (toggle in settings)
 
 Fully local voice processing + multi-model AI support.  
 If anything breaks or behaves unexpectedly, Grix is there to guide you through diagnosis and recovery.
