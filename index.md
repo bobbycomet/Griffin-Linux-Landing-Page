@@ -13,7 +13,6 @@ Whether you're gaming on the latest RTX, AMD, or Intel hardware, migrating your 
 
 **As such, I will be dropping some flavors because of this, in order to keep things simple, I will be focusing on KDE only. This is because legal issues in small distro projects like mine are like a death trap. It can kill it.**
 
-
 **KDE**
 - Talon based on Kubuntu KDE Plasma
 - Modern Windows 11 look & customization
