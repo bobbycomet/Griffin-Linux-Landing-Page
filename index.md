@@ -7,6 +7,12 @@
 **Griffin Linux** is a user-friendly, gaming-ready Linux distribution designed for Windows users who want a familiar desktop, powerful performance, and intelligent assistance — without the ads, telemetry, or bloat of modern Windows.
 Whether you're gaming on the latest RTX, AMD, or Intel hardware, migrating your files and projects, or just browsing — Griffin Linux makes the switch **simple, smart, and powerful**.
 
+**With the recent shift in legal mandates—specifically the expanding 'Age Assurance' and data-tracking requirements in the UK, California, and Colorado—Griffin Linux is currently evaluating a regional block for these areas. This will include other areas such as Brazil if they pass theirs. To feasibly do that properly for many countries with varied laws is very fragile. But lawmakers are not the brightest in terms of tech. What is fragile? Oh gee, I don't know... The different age brackets per location, the API specs, breaking of privacy models. I mean, the list goes on.**
+
+**Why? Because Linux should be private. New laws are pressuring OS providers to collect and share user metadata (like age attestation) with third-party apps and stores. We believe your OS should be a tool for you, not a compliance officer for the state. We don't believe in your data being shared, and we won't compromise the 'Zero-Telemetry' core of Griffin Linux just to satisfy overreaching legislation. Your privacy isn't up for negotiation.**
+
+**As such, I will be dropping some flavors because of this, in order to keep things simple, I will be focusing on KDE only. This is because legal issues in small distro projects like mine are like a death trap. It can kill it.**
+
 ## Editions
 
 **Cinnamon (Flagship)**
