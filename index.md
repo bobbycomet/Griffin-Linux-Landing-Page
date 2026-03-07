@@ -13,19 +13,6 @@ Whether you're gaming on the latest RTX, AMD, or Intel hardware, migrating your 
 
 **As such, I will be dropping some flavors because of this, in order to keep things simple, I will be focusing on KDE only. This is because legal issues in small distro projects like mine are like a death trap. It can kill it.**
 
-## Editions
-
-**Cinnamon (Flagship)**
-- Griffin OS based on Linux Mint Cinnamon
-- Everyday use, Windows 7/10 feel
-- Classic taskbar + modern accents
-- mutable (full terminal use for Linux purists)
-
-**XFCE**
-- Griffin Aerie based on Linux Mint XFCE
-- Older hardware, low resource usage
-- Clean and lightweight
-- mutable (full terminal use for Linux purists)
 
 **KDE**
 - Talon based on Kubuntu KDE Plasma
