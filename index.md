@@ -2,7 +2,9 @@
   <img src="griffinlinux.png" alt="Griffin Linux" width="70%"/>
 </div>
 
-# Griffin Linux – The Smartest Way to Switch from Windows **Coming soon in 2026.**
+# **When it rains, it storms... Well, all of my projects will still be developed, but it will now just be that... projects. My last USB became a paperweight. So, I will not be able to test my ISO until I get one. When will that be? I have no idea. I have not had a job in 3 years because of some health issues, and I'm still fighting the disability office. I will take down my GitHub sponsor for this because if I can't test it, there is no reason. When I can get a new one, then I will. For now, I know no one was really watching this project, but if some were, I am sorry that I have to put this on hold for now. I know USBs are not expensive, but foodstamps can't buy them.**
+
+## Griffin Linux – The Smartest Way to Switch from Windows **Coming soon?**
 
 **Griffin Linux** is a user-friendly, gaming-ready Linux distribution designed for Windows users who want a familiar desktop, powerful performance, and intelligent assistance — without the ads, telemetry, or bloat of modern Windows.
 Whether you're gaming on the latest RTX, AMD, or Intel hardware, migrating your files and projects, or just browsing — Griffin Linux makes the switch **simple, smart, and powerful**.
