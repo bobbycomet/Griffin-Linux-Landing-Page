@@ -2,26 +2,22 @@
   <img src="griffinlinux.png" alt="Griffin Linux" width="70%"/>
 </div>
 
-# **When it rains, it storms... Well, all of my projects will still be developed, but it will now just be that... projects. My last USB became a paperweight. So, I will not be able to test my ISO until I get one. When will that be? I have no idea. I have not had a job in 3 years because of some health issues, and I'm still fighting the disability office. I will take down my GitHub sponsor for this because if I can't test it, there is no reason. When I can get a new one, then I will. For now, I know no one was really watching this project, but if some were, I am sorry that I have to put this on hold for now. I know USBs are not expensive, but foodstamps can't buy them.**
+# **Griffin has been working hard to make things better. Grix has been toned down as the AI for local first is an approach that used too many resources. So, it was curated with commands and is being worked on to run on a variety of distros, such as Ubuntu, Fedora, Arch, and more. Grix is being tested as we speak.**
+
+## **Now, for the official stance on age restriction laws, and how Griffin will act going forward: [Read the official stance on age restriction laws here](https://tech-thrust.blogspot.com/2026/04/griffin-linux-and-stance-on-age.html)**
 
 ## Griffin Linux – The Smartest Way to Switch from Windows **Coming soon?**
 
 **Griffin Linux** is a user-friendly, gaming-ready Linux distribution designed for Windows users who want a familiar desktop, powerful performance, and intelligent assistance — without the ads, telemetry, or bloat of modern Windows.
 Whether you're gaming on the latest RTX, AMD, or Intel hardware, migrating your files and projects, or just browsing — Griffin Linux makes the switch **simple, smart, and powerful**.
 
-**With the recent shift in legal mandates—specifically the expanding 'Age Assurance' and data-tracking requirements in the UK, California, and Colorado—Griffin Linux is currently evaluating a regional block for these areas. This will include other areas such as Brazil if they pass theirs. To feasibly do that properly for many countries with varied laws is very fragile. But lawmakers are not the brightest in terms of tech. What is fragile? Oh gee, I don't know... The different age brackets per location, the API specs, breaking of privacy models. I mean, the list goes on.**
-
-**Why? Because Linux should be private. New laws are pressuring OS providers to collect and share user metadata (like age attestation) with third-party apps and stores. We believe your OS should be a tool for you, not a compliance officer for the state. We don't believe in your data being shared, and we won't compromise the 'Zero-Telemetry' core of Griffin Linux just to satisfy overreaching legislation. Your privacy isn't up for negotiation.**
-
-**As such, I will be dropping some flavors because of this, in order to keep things simple, I will be focusing on KDE only. This is because legal issues in small distro projects like mine are like a death trap. It can kill it.**
 
 **KDE**
-- Talon based on Kubuntu KDE Plasma
+- Talon edition based on Kubuntu 24.04 LTS (or latest)
 - Modern Windows 11 look & customization
 - Windows 11-inspired layout
 - mutable (full terminal use for Linux purists)
 
-All editions include the same powerful Griffin tools and curated repository. Grix will have a lighter version for older hardware and laptops, cloud-only AI models.
 
 ## Why Choose Griffin Linux?
 
@@ -29,38 +25,29 @@ All editions include the same powerful Griffin tools and curated repository. Gri
 - Intelligent assistance with Grix
 - Gaming-ready out of the box
 - No telemetry, ads, or forced updates
-- Built on proven Linux Mint stability
 - Completely free and community-driven
  
 
 ## Key Features
 
-### Grix – Your Built-in AI Assistant
+### Grix – Your Built-in Companion
 
 <div align="center">
   <img src="Grix.png" alt="Grix - Your AI friend" width="40%"/>
   <p><i>Your AI friend.</i></p>
 </div>
 
-The ultimate system-aware companion (what Copilot wishes it could be).
+The ultimate system-aware companion.
 
-- Voice-activated ("Hey Grix")
-- Zero telemetry — nothing leaves your machine unless you use cloud AI.
-- Local-first — full functionality with local Ollama models.
-- No web search — avoids hallucinations; sticks to facts from your documents, system
-- Personal Knowledge Base (RAG) 
-- You own your data — all notes, todos, reminders, knowledge base stored plainly in ~/Notes/Grix and ~/.config/grix.data, and curated knowledge.
+- Zero telemetry — nothing leaves your machine.
 - System Awareness & Proactive Help
 - Suggests and applies fixes with your approval
-- Securely installs packages (apt, PIP & Flatpak)
 - Learning & Education. Teaches Linux step-by-step
 - System Diagnostics & Health
 - Opt-in Python plugins for advanced users
 - Advanced static safety scanner (AST-based). Plugin scanning for malicious code
-- Hardened command confirmation mode (toggle in settings)
 
 
-Fully local voice processing + multi-model AI support.  
 If anything breaks or behaves unexpectedly, Grix is there to guide you through diagnosis and recovery.
 
 ### Gaming & Performance Suite
@@ -142,7 +129,6 @@ Seamless transition from Windows:
 
 ## Roadmap
 
-- Full public release of all three editions in 2026
 - Expanded Grix capabilities and integrations
 - Windows Appify version
 - More hardware-specific tools and optimizations
