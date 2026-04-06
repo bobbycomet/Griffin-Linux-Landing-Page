@@ -2,7 +2,7 @@
   <img src="griffinlinux.png" alt="Griffin Linux" width="70%"/>
 </div>
 
-# **Griffin has been working hard to make things better. Grix has been toned down as the AI for local first is an approach that used too many resources. So, it was curated with commands and is being worked on to run on a variety of distros, such as Ubuntu, Fedora, Arch, and more. Grix is being tested as we speak.**
+# **I have been working hard to make things better for Griffin. Grix has been toned down as the AI for local first is an approach that used too many resources. So, it was curated with commands and is being worked on to run on a variety of distros, such as Ubuntu, Fedora, Arch, and more, mutable and immutable. Grix will not be for every conceivable command, as it is for the most common reasons people don't stay on Linux. The Plug-in system will be added after the initial release is sent out and is stable. I want to make it, test it, and tweak it before I add more. I decided to stop production on the Griffin Dashboard. Why? Since Griffin will be using KDE, the system monitor does the same thing I wanted to achieve, a Task Manager look and feel. This is to not cause bloat on the system.**
 
 ## **Now, for the official stance on age restriction laws, and how Griffin will act going forward: [Read the official stance on age restriction laws here](https://tech-thrust.blogspot.com/2026/04/griffin-linux-and-stance-on-age.html)**
 
@@ -57,7 +57,7 @@ Everything is tuned for smooth gameplay and responsiveness:
   <img src="ControllerHub.png" alt="Griffin Linux" width="25%"/>
 </div>
 
-- **ControllerHub** – Auto-detects Xbox, PlayStation, Nintendo, wheels — applies optimal profiles and firmware.
+- **ControllerHub** – Auto-detects Xbox, PlayStation, Nintendo, wheels — applies optimal profiles and firmware. This includes third-party controllers and wheels.
 
 <div align="center">
   <img src="FanHub.png" alt="Griffin Linux" width="25%"/>
@@ -70,9 +70,9 @@ Everything is tuned for smooth gameplay and responsiveness:
 </div>
 
 - **CpuHub** – Easy CPU governor control (performance, balanced, powersave).
-- **Sentry** – Smart resource manager using cgroups; learns your habits for smoother multitasking. Includes editable `config.yaml` for advanced users to customize or reverse settings.
+- **Sentry** – Smart resource manager using cgroups; learns your habits for smoother multitasking. Includes editable `config.yaml` for advanced users to customize or reverse settings. [Check it out here](https://github.com/bobbycomet/Process-Sentry)
 - **Auto-Gamemode** – Automatically activates optimizations when launching Steam, Lutris, or Heroic, and triggers Sentry to intelligently throttle background tasks for stutter-free gaming.
-- **kernel-autotune** – Detects your hardware (desktop/laptop, RAM, kernel type) and applies optimal baselines (Zram/Zswap, BBR TCP, governors, and more). Fully reversible/customizable via config file for power users.
+- **kernel-autotune** – Detects your hardware (desktop/laptop, RAM, kernel type) and applies optimal baselines (Zram/Zswap, BBR TCP, governors, and more). Fully reversible/customizable via config file for power users.[Check it out here](https://github.com/bobbycomet/kernel-autotune-V2)
 - **Noatime-autotune** – Simple SSD health optimization.
 
 ### Hardware, Kernel, & Driver Tools
@@ -89,7 +89,7 @@ No more forum hunting:
   <img src="com.xanmod.kernel.manager.png" alt="Griffin Linux" width="25%"/>
 </div>
 
-- **XKM** – Manages Xanmod, Liquorix, and Mainline kernels. Installs Xanmod and Liquorix PPAs, removes or installs kernels with DKMS rebuilds, cleans up unused kernels (can be turned off). https://github.com/bobbycomet/XKM-Multi-Kernel-Manager
+- **XKM** – Manages Xanmod, Liquorix, and Mainline kernels. Installs Xanmod and Liquorix PPAs, removes or installs kernels with DKMS rebuilds, cleans up unused kernels (can be turned off). [Check it out here](https://github.com/bobbycomet/XKM-Multi-Kernel-Manager)
 
 ### Migration & Productivity
 Seamless transition from Windows:
@@ -104,28 +104,20 @@ Seamless transition from Windows:
   <img src="Appify.png" alt="Griffin Linux" width="25%"/>
 </div>
 
-- **Appify** – Turn any website into an isolated, native-feeling desktop app (Gmail, Twitch, Discord, cloud gaming). https://github.com/bobbycomet/Appify
+- **Appify** – Turn any website into an isolated, native-feeling desktop app (Gmail, Twitch, Discord, cloud gaming). [Check it out here](https://github.com/bobbycomet/Appify)
 
 <div align="center">
   <img src="postinstaller.png" alt="Griffin Linux" width="25%"/>
 </div>
 
-- **Postinstaller** – One-click category bundles (Gaming, Productivity, Audio, System Tools) — everything you need, instantly.
-
-### Dashboard
-
-<div align="center">
-  <img src="griffindashboard.png" alt="Griffin Linux" width="25%"/>
-</div>
-
-**Griffin Dashboard** – Real-time Task Manager-like system monitor with per-core and temps CPU graphs, GPU stats and temps, Disk use, RAM use, and process management.
+- **Postinstaller** – One-click category bundles (Gaming, Productivity, Audio, System Tools, General use, or everything) — everything you need, instantly.
 
 
 ## Community & Support
 
-- Discord: https://discord.gg/7fEt5W7DPh
-- Patreon (Early Builds & Support): https://www.patreon.com/c/BobbyComet
-- Ko-fi: https://ko-fi.com/bobby60908
+- Discord: [Click here to join](https://discord.gg/7fEt5W7DPh)
+- Patreon (Early Builds & Support): [Click here to join](https://www.patreon.com/c/BobbyComet)
+- Ko-fi: [Click here to donate](https://ko-fi.com/bobby60908)
 
 ## Roadmap
 
