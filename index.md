@@ -30,11 +30,11 @@ Whether you're gaming on the latest RTX, AMD, or Intel hardware, migrating your 
 
 ## Key Features
 
-### Grix – Your Built-in Companion
+### Grix
 
 <div align="center">
   <img src="Grix.png" alt="Grix - Your AI friend" width="40%"/>
-  <p><i>Your AI friend.</i></p>
+  <p><i>Your Built-in Companion.</i></p>
 </div>
 
 The ultimate system-aware companion.
