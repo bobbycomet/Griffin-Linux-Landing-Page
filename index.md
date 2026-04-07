@@ -2,7 +2,9 @@
   <img src="griffinlinux.png" alt="Griffin Linux" width="70%"/>
 </div>
 
-# **I have been working hard to make things better for Griffin. Grix has been toned down as the AI for local first is an approach that used too many resources. So, it was curated with commands and is being worked on to run on a variety of distros, such as Ubuntu, Fedora, Arch, and more, mutable and immutable. Grix will not be for every conceivable command, as it is for the most common reasons people don't stay on Linux. The Plug-in system will be added after the initial release is sent out and is stable. I want to make it, test it, and tweak it before I add more. I decided to stop production on the Griffin Dashboard. Why? Since Griffin will be using KDE, the system monitor does the same thing I wanted to achieve, a Task Manager look and feel. This is to not cause bloat on the system.**
+# Updates — **I have been working hard to make things better for Griffin. Grix has been toned down as the AI for local first is an approach that used too many resources. So, it was curated with commands and is being worked on to run on a variety of distros, such as Ubuntu, Fedora, Arch, and more, mutable and immutable. Grix will not be for every conceivable command, as it is for the most common reasons people don't stay on Linux. The Plug-in system will be added after the initial release is sent out and is stable. I want to make it, test it, and tweak it before I add more. I decided to stop production on the Griffin Dashboard. Why? Since Griffin will be using KDE, the system monitor does the same thing I wanted to achieve, a Task Manager look and feel. This is to not cause bloat on the system.**
+
+## Want early access or to help shape Griffin? Join our Discord or support on Patreon.
 
 ## **Now, for the official stance on age restriction laws, and how Griffin will act going forward: [Read the official stance on age restriction laws here](https://tech-thrust.blogspot.com/2026/04/griffin-linux-and-stance-on-age.html)**
 
@@ -33,7 +35,7 @@ Whether you're gaming on the latest RTX, AMD, or Intel hardware, migrating your 
 ### Grix
 
 <div align="center">
-  <img src="Grix.png" alt="Grix - Your AI friend" width="40%"/>
+  <img src="Grix.png" alt="Grix - Your Built-in Companion" width="40%"/>
   <p><i>Your Built-in Companion.</i></p>
 </div>
 
@@ -41,11 +43,14 @@ The ultimate system-aware companion.
 
 - Zero telemetry — nothing leaves your machine.
 - System Awareness & Proactive Help
+- Shows you exactly what it will do, asks for approval, or gives you the command to fix it
+- Saves what was fixed in a log for you to learn and study, or if you want to audit the tool
 - Suggests and applies fixes with your approval
-- Learning & Education. Teaches Linux step-by-step
-- System Diagnostics & Health
-- Opt-in Python plugins for advanced users
-- Advanced static safety scanner (AST-based). Plugin scanning for malicious code
+- Learning & Education. Teaches Linux step-by-step (not required)
+- System Diagnostics & Health with 14 key system checks
+- Gaming and streaming specific checks and fixes
+- Opt-in Python plugins for advanced users (future feature)
+- Advanced static safety scanner (AST-based). Plugin scanning for malicious code (future feature)
 
 
 If anything breaks or behaves unexpectedly, Grix is there to guide you through diagnosis and recovery.
