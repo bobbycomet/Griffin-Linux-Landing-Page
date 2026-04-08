@@ -5,13 +5,11 @@
   <p><strong>The easiest way for Windows users to get a fast, no-nonsense Linux. With intelligent built-in help.</strong></p>
   <p>No ads. No telemetry. No bloat. Just your PC, the way it should have always been.</p>
 
-  <br/>
-
-  [![Discord](https://img.shields.io/badge/Join%20Discord-Early%20Access-5865F2?style=for-the-badge&logo=discord)](https://discord.gg/7fEt5W7DPh)
-  [![Patreon](https://img.shields.io/badge/Support%20on%20Patreon-Early%20Builds-FF424D?style=for-the-badge&logo=patreon)](https://www.patreon.com/c/BobbyComet)
-  [![Ko-fi](https://img.shields.io/badge/Donate-Ko--fi-FF5E5B?style=for-the-badge&logo=kofi)](https://ko-fi.com/bobby60908)
-
-  <br/>
+  <div align="center">
+  <a href="https://discord.gg/7fEt5W7DPh" style="display:inline-block;padding:12px 24px;margin:6px;background:#5865F2;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold;">💬 Join Discord — Early Access</a>
+  <a href="https://www.patreon.com/c/BobbyComet" style="display:inline-block;padding:12px 24px;margin:6px;background:#FF424D;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold;">🎖️ Support on Patreon</a>
+  <a href="https://ko-fi.com/bobby60908" style="display:inline-block;padding:12px 24px;margin:6px;background:#FF5E5B;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold;">☕ Ko-fi</a>
+</div>
   <sub>⚠️ Griffin Linux is currently in active development. Features shown are in progress. Join Discord to follow along and get early access.</sub>
 </div>
 
