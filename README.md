@@ -34,7 +34,7 @@ Linux has always been powerful. It just hasn't always been welcoming. Griffin ex
   <p><i>System-aware. Transparent. Always on your side.</i></p>
 </div>
 
-Grix is the heart of Griffin. Instead of hunting through forums and Reddit threads when something breaks, Grix runs targeted checks and walks you through fixes — with your approval before anything changes.
+Grix is the heart of Griffin. Instead of hunting through forums and Reddit threads when something breaks, Grix runs targeted checks and walks you through fixes — with your approval before anything changes. [Preview on GitHub before release](https://github.com/bobbycomet/Grix-Preview)
 
 **What Grix does:**
 
