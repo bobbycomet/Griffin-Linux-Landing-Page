@@ -5,7 +5,7 @@
   <p><strong>The easiest way for Windows users to get a fast, no-nonsense Linux. With intelligent built-in help.</strong></p>
   <p>No ads. No telemetry. No bloat. Just your PC, the way it should have always been.</p>
 
-  <div align="center">
+ <div align="center">
   <a href="https://discord.gg/7fEt5W7DPh" style="display:inline-block;padding:12px 24px;margin:6px;background:#5865F2;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold;">💬 Join Discord — Early Access</a>
   <a href="https://www.patreon.com/c/BobbyComet" style="display:inline-block;padding:12px 24px;margin:6px;background:#FF424D;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold;">🎖️ Support on Patreon</a>
   <a href="https://ko-fi.com/bobby60908" style="display:inline-block;padding:12px 24px;margin:6px;background:#FF5E5B;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold;">☕ Ko-fi</a>
@@ -34,7 +34,7 @@ Linux has always been powerful. It just hasn't always been welcoming. Griffin ex
   <p><i>System-aware. Transparent. Always on your side.</i></p>
 </div>
 
-Grix is the heart of Griffin. Instead of hunting through forums and Reddit threads when something breaks, Grix runs targeted checks and walks you through fixes — with your approval before anything changes.
+Grix is the heart of Griffin. Instead of hunting through forums and Reddit threads when something breaks, Grix runs targeted checks and walks you through fixes — with your approval before anything changes. [Preview on GitHub before release](https://github.com/bobbycomet/Grix-Preview)
 
 **What Grix does:**
 
