@@ -1,5 +1,7 @@
 <div align="center">
   <img src="griffinlinux.png" alt="Griffin Linux" width="70%"/>
+
+  
 ---
 # Mission statement:
 
