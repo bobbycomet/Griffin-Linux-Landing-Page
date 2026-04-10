@@ -1,5 +1,9 @@
 <div align="center">
   <img src="griffinlinux.png" alt="Griffin Linux" width="70%"/>
+
+
+
+
 ---
 # Mission statement:
 
@@ -141,7 +145,7 @@ When hardware needs attention, Griffin provides focused tools designed for speci
 
 - ControllerHub for game controllers and wheels
 - FanHub for fan curves and cooling
-- CPUHub for power and performance modes
+- CPU Hub for power and performance modes
 - WiFi Hub for Realtek and Broadcom fixes
 - GPU Hub for driver management and hardware swaps
 - XKM for advanced kernel management
@@ -200,7 +204,7 @@ Everything tuned for smooth gameplay and responsive multitasking — no manual c
   <img src="ControllerHub.png" alt="ControllerHub" width="25%"/>
 </div>
 
-**ControllerHub** — Auto-detects Xbox, PlayStation, Nintendo, and third-party controllers and wheels. Applies optimal profiles and firmware automatically. Moved to Grix, and has the same logic. Xone and Xpad-noone are treated as a pair; all others that conflict will be blacklisted, but can be swapped in Grix.
+**Controller Hub** — Auto-detects Xbox, PlayStation, Nintendo, and third-party controllers and wheels. Applies optimal profiles and firmware automatically. Moved to Grix, and has the same logic. Xone and Xpad-noone are treated as a pair; all others that conflict will be blacklisted, but can be swapped in Grix.
 
 <div align="center">
   <img src="FanHub.png" alt="FanHub" width="25%"/>
@@ -212,7 +216,7 @@ Everything tuned for smooth gameplay and responsive multitasking — no manual c
   <img src="CPUHub.png" alt="CPUHub" width="25%"/>
 </div>
 
-**CPUHub** — Simple CPU governor control: performance, balanced, or powersave. Grix will alert you if it detects you're gaming in the wrong mode, switches to the one you need, and you can switch to the mode you want any time with performance, powersave, balanced, and so on profiles. 
+**CPU Hub** — Simple CPU governor control: performance, balanced, or powersave. Grix will alert you if it detects you're gaming in the wrong mode, switches to the one you need, and you can switch to the mode you want any time with performance, powersave, balanced, and so on profiles. 
 
 **Auto-Gamemode** — Automatically activates when you launch Steam, Lutris, or Heroic. Triggers Sentry to intelligently throttle background tasks so games get the resources they need. This works with Process Sentry. Sentry will see you gaming, it slows down other processes, except for things like OBS and other curated software, so streamers still get performance in both, so you get all the performance, none of the "oops I throttled your stream." Planned to be a part of Grix for a start button if it fails silently.
 
@@ -228,9 +232,9 @@ Everything tuned for smooth gameplay and responsive multitasking — no manual c
 
 No more forum-diving for driver fixes.
 
-**WIFI Hub formerly RealtekHub** — A dedicated GUI for fixing the notorious Realtek WiFi issues that frustrate new Linux users. Grix will point you here if it detects your chip. Moved to be a part of Grix, which includes Broadcom drivers as well.
+**WIFI Hub** — A dedicated GUI for fixing the notorious Realtek WiFi issues that frustrate new Linux users. Grix will point you here if it detects your chip. Moved to be a part of Grix, which includes Broadcom drivers as well.
 
-**GPU HUB formerly Universal GPU Installer** — Grix now detects your GPU (NVIDIA, AMD, or Intel), adds the right PPAs, and installs the optimal driver. Handles hardware brand switches by clicking "hardware swap", and it reverts to the basic drivers, so when you turn off, install the GPU, and boot back in, Grix sees the switch. Targeting RTX 50-series and RDNA4 support (in progress — manage expectations while this matures).
+**GPU HUB** — Grix now detects your GPU (NVIDIA, AMD, or Intel), adds the right PPAs, and installs the optimal driver. Handles hardware brand switches by clicking "hardware swap", and it reverts to the basic drivers, so when you turn off, install the GPU, and boot back in, Grix sees the switch. Targeting RTX 50-series and RDNA4 support (in progress — manage expectations while this matures).
 
 <div align="center">
   <img src="com.xanmod.kernel.manager.png" alt="XKM" width="25%"/>
@@ -254,7 +258,7 @@ The move from Windows shouldn't mean starting from scratch.
   <img src="Appify.png" alt="Appify" width="25%"/>
 </div>
 
-**Appify** — Turn any website into an isolated, native-feeling desktop app. Gmail, Twitch, Discord, cloud gaming services — no browser tab required. Process Sentry has flags to not slow down the cloud service games. This is still maturing. [View on GitHub](https://github.com/bobbycomet/Appify)
+**Appify** — Turn any website into an isolated, native-feeling desktop app. Gmail, Twitch, Discord, cloud gaming services — no browser tab required. Process Sentry has flags to not slow down the cloud service games. [View on GitHub](https://github.com/bobbycomet/Appify)
 
 <div align="center">
   <img src="postinstaller.png" alt="Postinstaller" width="25%"/>
