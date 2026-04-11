@@ -1,8 +1,19 @@
 <div align="center">
   <img src="griffinlinux.png" alt="Griffin Linux" width="70%"/>
 
+  <h1>Griffin Linux</h1>
+  <p><strong>The easiest way for Windows users to get a fast, no-nonsense Linux. With intelligent built-in help.</strong></p>
+  <p>No ads. No telemetry. No bloat. Just your PC, the way it should have always been.</p>
 
+ <div align="center">
+  <a href="https://discord.gg/7fEt5W7DPh" style="display:inline-block;padding:12px 24px;margin:6px;background:#5865F2;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold;">💬 Join Discord — Early Access</a>
+  <a href="https://www.patreon.com/c/BobbyComet" style="display:inline-block;padding:12px 24px;margin:6px;background:#FF424D;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold;">🎖️ Support on Patreon</a>
+  <a href="https://ko-fi.com/bobby60908" style="display:inline-block;padding:12px 24px;margin:6px;background:#FF5E5B;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold;">☕ Ko-fi</a>
+</div>
+  <sub>⚠️ Griffin Linux is currently in active development. Features shown are in progress. Join Discord to follow along and get early access.</sub>
+</div>
 
+---
 
 ---
 # Mission statement:
@@ -24,20 +35,6 @@ They leave because they want control, privacy, performance, and a computer that 
 
 **Linux stays powerful and fully open.**
 **But the first experience finally feels simple.**
-
----
-
-  <h1>Griffin Linux</h1>
-  <p><strong>The easiest way for Windows users to get a fast, no-nonsense Linux. With intelligent built-in help.</strong></p>
-  <p>No ads. No telemetry. No bloat. Just your PC, the way it should have always been.</p>
-
- <div align="center">
-  <a href="https://discord.gg/7fEt5W7DPh" style="display:inline-block;padding:12px 24px;margin:6px;background:#5865F2;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold;">💬 Join Discord — Early Access</a>
-  <a href="https://www.patreon.com/c/BobbyComet" style="display:inline-block;padding:12px 24px;margin:6px;background:#FF424D;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold;">🎖️ Support on Patreon</a>
-  <a href="https://ko-fi.com/bobby60908" style="display:inline-block;padding:12px 24px;margin:6px;background:#FF5E5B;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold;">☕ Ko-fi</a>
-</div>
-  <sub>⚠️ Griffin Linux is currently in active development. Features shown are in progress. Join Discord to follow along and get early access.</sub>
-</div>
 
 ---
 
