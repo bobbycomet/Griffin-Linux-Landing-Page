@@ -40,7 +40,7 @@ They leave because they want control, privacy, performance, and a computer that 
 
 ## Why Griffin?
 
-Linux has always been powerful. It just hasn't always been welcoming. Griffin exists to close that gap, not by hiding Linux, but by making it approachable on day one, then getting out of your way.
+Linux has always been powerful. It just hasn't always been welcoming. Griffin exists to close that gap, not by hiding Linux, but by making it approachable on day one, then getting out of your way. Griffin does not replace Kubuntu; it is a layer on top of Kubuntu. The same great Desktop, package managers, drivers, and upstreams, but with many more approachable features.
 
 - **Familiar from the start** — KDE desktop with a Windows 11-style layout, so nothing feels alien
 - **Grix is always there** — a built-in companion that diagnoses issues, suggests fixes, and explains what it's doing
@@ -76,6 +76,7 @@ Grix is the heart of Griffin. Instead of hunting through forums and Reddit threa
 - Detects hardware states: "Your CPU is stuck in powersave mode. Want to change it?" or "I see a Realtek WiFi chip, here's the driver for your exact model."
 - Integrates ControllerHub, RealtekHub, and CPUHub directly, so common hardware headaches are handled in one place
 - Launches dedicated tools (FanHub, XKM) when those situations arise, rather than cramming everything in
+- CPU Hub, GPU Hub, Wifi Hub, Controller Hub, Sentry, and Kernel autotune are already integrated with Grix for a single command center.
 
 > Grix is not trying to do everything. It targets the specific problems that drive people back to Windows, and handles them cleanly.
 
@@ -147,7 +148,7 @@ When hardware needs attention, Griffin provides focused tools designed for speci
 - GPU Hub for driver management and hardware swaps
 - XKM for advanced kernel management
 
-Each tool is specialized instead of being crammed into one giant app.
+Each tool is specialized instead of being crammed into one giant app, and they still work together for a cohesive workflow that you either never notice or feel like you never need to be a Linux expert.
 
 4) The Workflow Layer — Living and working in Linux
 
@@ -207,21 +208,21 @@ Everything tuned for smooth gameplay and responsive multitasking — no manual c
   <img src="FanHub.png" alt="FanHub" width="25%"/>
 </div>
 
-**FanHub** — Windows-style fan curve editor with profiles and OpenRGB integration. Runs as a standalone app (launched by Grix when your system needs it).
+**FanHub** — Windows-style fan curve editor with profiles with luquidctl and OpenRGB integration for not only peripherals, but AIOs, name-brand fans, CPU fans, GPU fans, NVME temps, RAM temps, and more. Runs without OpenRGB open as it hooks into the OpenRGB server. This means you can control RGB in Fan Hub. Runs as a standalone app (launched by Grix, the application's window, or with sudo fanhub, when your system needs it), but with the control of Linux, without ever needing to run commands.
 
 <div align="center">
   <img src="CPUHub.png" alt="CPUHub" width="25%"/>
 </div>
 
-**CPU Hub** — Simple CPU governor control: performance, balanced, or powersave. Grix will alert you if it detects you're gaming in the wrong mode, switches to the one you need, and you can switch to the mode you want any time with performance, powersave, balanced, and so on profiles. 
+**CPU Hub** — Simple CPU governor control: performance, balanced, or powersave. Grix will alert you if it detects you're gaming in the wrong mode, switches to the one you need, and you can switch to the mode you want any time with performance, powersave, balanced, and so on profiles. Kernel Autotune sets the performance layer, but this will override the power, so you choose your performance.
 
 **Auto-Gamemode** — Automatically activates when you launch Steam, Lutris, or Heroic. Triggers Sentry to intelligently throttle background tasks so games get the resources they need. This works with Process Sentry. Sentry will see you gaming, it slows down other processes, except for things like OBS and other curated software, so streamers still get performance in both, so you get all the performance, none of the "oops I throttled your stream." Planned to be a part of Grix for a start button if it fails silently.
 
-**Sentry** — Smart resource manager using cgroups. Learns your usage habits over time for smoother multitasking. Fully customizable via `config.yaml` — every setting is reversible. Planned to be a part of Grix later for configuration, and a start button if the daemon fails. [View on GitHub](https://github.com/bobbycomet/Process-Sentry)
+**Sentry** — Smart resource manager using cgroups. Learns your usage habits over time for smoother multitasking. Fully customizable via `config.yaml` — every setting is reversible. Planned to be a part of Grix later for configuration, and a start button if the daemon fails. Sentry comes with Appify flags, so it never slows down your favorite apps, and comes with a config file, so you don't have to make one. Don't have the app? It skips that check. Config file is editable in Grix, and the daemon can be stopped or started in Grix.  [View on GitHub](https://github.com/bobbycomet/Process-Sentry)
 
-**kernel-autotune** — Detects your hardware (desktop vs laptop, RAM, kernel type) and applies smart baseline tweaks: Zram/Zswap, BBR TCP, governors, and more. Fully reversible via config file. Planned to be a part of Grix later for configuring and to check if it is working, with a button to start it if it fails at boot. [View on GitHub](https://github.com/bobbycomet/kernel-autotune-V2)
+**kernel-autotune** — Detects your hardware (desktop vs laptop, RAM, kernel type) and applies smart baseline tweaks: Zram/Zswap, BBR TCP, governors, and more. Fully reversible via config file. Planned to be a part of Grix later for configuring and to check if it is working, with a button to start it if it fails at boot. Creates a config file and state.json. They record your system locally for Grix to understand the state of your system, and update it when there is a change. You can also edit the config in Grix, and you can start and stop in Grix. This even updates when you use XKM to change kernels. [View on GitHub](https://github.com/bobbycomet/kernel-autotune-V2)
 
-**Noatime-autotune** — A simple, quiet SSD health optimization that runs in the background.
+**Noatime-autotune** — A simple, quiet SSD health optimization that runs in the background. Kernel autotune handles the HDD side.
 
 ---
 
@@ -229,7 +230,7 @@ Everything tuned for smooth gameplay and responsive multitasking — no manual c
 
 No more forum-diving for driver fixes.
 
-**WIFI Hub** — A dedicated GUI for fixing the notorious Realtek WiFi issues that frustrate new Linux users. Grix will point you here if it detects your chip. Moved to be a part of Grix, which includes Broadcom drivers as well.
+**WIFI Hub** — A dedicated GUI for fixing the notorious Realtek WiFi issues that frustrate new Linux users. Grix will point you here if it detects your chip. Moved to be a part of Grix, which includes Broadcom drivers as well. Pairs well when you use an Xanmod Kernel through XKM, and Kernel autotune handles congestion and how fair the wifi is being used in the system.
 
 **GPU HUB** — Grix now detects your GPU (NVIDIA, AMD, or Intel), adds the right PPAs, and installs the optimal driver. Handles hardware brand switches by clicking "hardware swap", and it reverts to the basic drivers, so when you turn off, install the GPU, and boot back in, Grix sees the switch. Targeting RTX 50-series and RDNA4 support (in progress — manage expectations while this matures).
 
@@ -237,7 +238,7 @@ No more forum-diving for driver fixes.
   <img src="com.xanmod.kernel.manager.png" alt="XKM" width="25%"/>
 </div>
 
-**XKM (Kernel Manager)** — Installs and manages Xanmod, Liquorix, and Mainline kernels. Handles DKMS rebuilds and unused kernel cleanup automatically (can be turned off). Launched from Grix for users who want to go deeper. [View on GitHub](https://github.com/bobbycomet/XKM-Multi-Kernel-Manager)
+**XKM (Kernel Manager)** — Installs and manages Xanmod, Liquorix, and Mainline kernels. Handles DKMS rebuilds and unused kernel cleanup automatically (can be turned off). Launched from Grix for users who want to go deeper. Kernel autotune handles the swaps, and Grix can fix DKMS if XKM fails. [View on GitHub](https://github.com/bobbycomet/XKM-Multi-Kernel-Manager)
 
 ---
 
@@ -255,13 +256,13 @@ The move from Windows shouldn't mean starting from scratch.
   <img src="Appify.png" alt="Appify" width="25%"/>
 </div>
 
-**Appify** — Turn any website into an isolated, native-feeling desktop app. Gmail, Twitch, Discord, cloud gaming services — no browser tab required. Process Sentry has flags to not slow down the cloud service games. [View on GitHub](https://github.com/bobbycomet/Appify)
+**Appify** — Turn any website into an isolated, native-feeling desktop app. Gmail, Twitch, Discord, cloud gaming services — no browser tab required. Process Sentry has flags to not slow down the cloud service games. Sentry flags make the experience much better and smoother. Particularly for cloud gaming. [View on GitHub](https://github.com/bobbycomet/Appify)
 
 <div align="center">
   <img src="postinstaller.png" alt="Postinstaller" width="25%"/>
 </div>
 
-**Postinstaller** — One-click app bundles by category: Gaming, Productivity, Audio, System Tools, streaming, General Use, or all of the above. Everything you need after a fresh install, in minutes. Vtubing is a profile planned to be added soon.
+**Postinstaller** — One-click app bundles by category: Gaming, Productivity, Audio, System Tools, streaming, General Use, or all of the above. Everything you need after a fresh install, in minutes. Vtubing is a profile planned to be added soon. You create the desktop you want from the start.
 
 ---
 
