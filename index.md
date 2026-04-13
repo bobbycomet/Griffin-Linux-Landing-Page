@@ -59,28 +59,26 @@ Linux has always been powerful. It just hasn't always been welcoming. Griffin ex
 
 Grix is the heart of Griffin. Instead of hunting through forums and Reddit threads when something breaks, Grix runs targeted checks and walks you through fixes — with your approval before anything changes. [Preview on GitHub before release](https://github.com/bobbycomet/Grix-Preview)
 
-**What Grix does:**
+## **Update on Grix – Simplifying for Reliability**
+Grix is currently under a major review and rewrite. Its core had grown overly complicated, trying to handle too many things across too many different setups. So we've made some focused changes before the first stable release:
 
-- Runs **comprehensive system health checks** — drivers, daemons, performance modes, hardware states, services, and more
-- **Suggests fixes and shows you exactly what it will do** before asking permission — no surprises
-- Logs every fix in a readable history so you can learn, audit, or reverse anything
-- Handles **workflow-specific setups**: tell Grix you're a gamer, streamer, VTuber, or content creator — it checks your installed apps (Flatpak, Snap, and native) and suggests relevant fixes
-- Teaches Linux step-by-step if you want it, skips the hand-holding if you don't
-- **Zero telemetry** — everything runs locally, nothing leaves your machine
+- Distro-agnostic features are being removed for now. Grix will focus tightly on Ubuntu-based systems with KDE Plasma (including Griffin Talon Edition and other Ubuntu flavors/spins). This makes it far more reliable and easier to maintain. Other Ubuntu spins and flavors will still benefit significantly from the improvements.
 
-**Grix runs locally, requires explicit approval for any changes, and keeps a clear log of everything it touches, so you stay in control and can learn along the way.**
+- System health checks are being narrowed down. Other dedicated Griffin tools are now handling broader system optimization and health, so Grix can concentrate on the specific, high-frustration problems that fall outside those tools, the exact things that usually send new users to forums or Reddit.
+ 
+- Process Sentry and Kernel Autotune have been moved into a new unified tool called Game Tune Hub. This keeps performance tuning clean and centralized.
 
-**Grix also acts as the control center for Griffin's tools:**
+- Postinstaller will now handle environment and app bundle provisioning. Workflow-based automation (e.g., "I'm a gamer/streamer/VTuber") will happen after first boot through simple user choices instead of trying to detect and configure everything automatically.
 
-- Checks whether performance daemons (kernel tuning, Gamemode, SSD optimization, process management) are active
-- Detects hardware states: "Your CPU is stuck in powersave mode. Want to change it?" or "I see a Realtek WiFi chip, here's the driver for your exact model."
-- Integrates ControllerHub, RealtekHub, and CPUHub directly, so common hardware headaches are handled in one place
-- Launches dedicated tools (FanHub, XKM) when those situations arise, rather than cramming everything in
-- CPU Hub, GPU Hub, Wifi Hub, Controller Hub, Sentry, and Kernel autotune are already integrated with Grix for a single command center.
+These changes make Grix lighter, more predictable, and much more reliable, especially across varying kernels and tricky updates like PipeWire. The goal remains exactly the same: 
 
-> Grix is not trying to do everything. It targets the specific problems that drive people back to Windows, and handles them cleanly.
+- a local, transparent companion that spots real issues, explains them plainly, shows you exactly what it will do, asks for your approval, and logs everything so you can learn or undo changes.
 
-**Coming later:** opt-in Python plugins for advanced users, with static (AST-based) safety scanning built in.
+- Grix will still serve as the friendly control center that launches the right Griffin tool when needed and guides you through common headaches (hardware quirks, audio glitches, driver situations, etc.) without forcing you to become a terminal expert.
+
+We're taking the time to get this foundation solid because first impressions matter.
+
+Thanks for your patience. This rework will result in a much smoother and more trustworthy experience. The rest of Griffin (FanHub, XKM, Griffin Migrate, Appify, etc.) continues moving forward, and the overall vision of a frustration-free switch from Windows stays fully on track.
 
 ---
 ## What this means for you
