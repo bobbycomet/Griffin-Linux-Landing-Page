@@ -10,7 +10,7 @@
   <a href="https://www.patreon.com/c/BobbyComet" style="display:inline-block;padding:12px 24px;margin:6px;background:#FF424D;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold;">🎖️ Support on Patreon</a>
   <a href="https://ko-fi.com/bobby60908" style="display:inline-block;padding:12px 24px;margin:6px;background:#FF5E5B;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold;">☕ Ko-fi</a>
 </div>
-  <sub>⚠️ Griffin Linux is currently in active development. Features shown are in progress. Join Discord to follow along and get early access.</sub>
+  <sub>⚠️ Griffin Linux is currently in active development. Features shown are in progress. Join Discord to follow along and get early access. Griffin is not affiliated with Ubuntu/Kubuntu or Canonical.</sub>
 </div>
 
 ---
@@ -68,7 +68,8 @@ Grix is currently under a major review and rewrite. Its core had grown overly co
  
 - Process Sentry and Kernel Autotune have been moved into a new unified tool called Game Tune Hub. This keeps performance tuning clean and centralized.
 
-- Postinstaller will now handle environment and app bundle provisioning. Workflow-based automation (e.g., "I'm a gamer/streamer/VTuber") will happen after first boot through simple user choices instead of trying to detect and configure everything automatically.
+- Postinstaller will now handle environment and app bundle provisioning. Workflow-based automation (e.g., "I'm a gamer/streamer/VTuber") will occur after the first boot via simple user choices, rather than automatically detecting and configuring everything. Postinstaller will also now handle GPU brand driver support by detecting hardware and installing the drivers and extras needed. For example, RTX 20 series to RTX 50 series will use driver 580, GTX 900 and GTX 10 series will use drivers 535/550. Postinstaller does not support Legacy drivers like 470 for GTX 600/700. This is because Kubuntu no longer supports it, and Griffin is built on top of it.
+- All Hub tools have been moved to a new tool called **Griffin Hub.** This tool houses all Hub tools, Wifi Hub, GPU Hub, and so on. This is so tasks are handled, rather than having one tool do it all.
 
 These changes make Grix lighter, more predictable, and much more reliable, especially across varying kernels and tricky updates like PipeWire. The goal remains exactly the same: 
 
@@ -190,6 +191,9 @@ Griffin replaces that experience with a coordinated system that:
 
 Griffin isn’t just preconfigured.
 It’s designed to keep working.
+
+**Griffin Updater** — To make things easier, Griffin will come with an updater for all of its tools. How this works is simple: it checks if the GitHub repos of each tool have an update, you get a notification, open the GUI, and update the highlighted tool. There will be no auto-update button. This is because you choose if you want to wait, see if the update works, and then update if you want. Previous versions will still work regardless. If you use AppImage, it just downloads the new AppImage, and you delete the old one. The reason for the manual deletion is that you might move the AppImage to another drive or file location. Instead of you having to browse just to have a cleanup feature, this keeps things simpler. The only cleanup feature will be for removing Deb files once the installation is done, and AppImages will have a feature built in when it has an update.
+
 ---
 
 ## Gaming & Performance Suite
@@ -214,9 +218,11 @@ Everything tuned for smooth gameplay and responsive multitasking — no manual c
 
 **CPU Hub** — Simple CPU governor control: performance, balanced, or powersave. Grix will alert you if it detects you're gaming in the wrong mode, switches to the one you need, and you can switch to the mode you want any time with performance, powersave, balanced, and so on profiles. Kernel Autotune sets the performance layer, but this will override the power, so you choose your performance.
 
-**Auto-Gamemode** — Automatically activates when you launch Steam, Lutris, or Heroic. Triggers Sentry to intelligently throttle background tasks so games get the resources they need. This works with Process Sentry. Sentry will see you gaming, it slows down other processes, except for things like OBS and other curated software, so streamers still get performance in both, so you get all the performance, none of the "oops I throttled your stream." Planned to be a part of Grix for a start button if it fails silently.
+**Game Tune Hub** — What was formerly auto gamemode is no longer a silent script. Instead, this was evolved into Game Tune Hub. The difference? Instead of automatically detecting a game running and activating Gamemode, this will now use a GUI to back up your Steam executable, create wrappers that allow Steam to run with Gamemode without needing launch options like gamemoderun %command%. This goes for Gamescope and Mangohud as well. You can remove these in the GUI and restore the original steam with the backup file made.
 
-**Sentry** — Smart resource manager using cgroups. Learns your usage habits over time for smoother multitasking. Fully customizable via `config.yaml` — every setting is reversible. Planned to be a part of Grix later for configuration, and a start button if the daemon fails. Sentry comes with Appify flags, so it never slows down your favorite apps, and comes with a config file, so you don't have to make one. Don't have the app? It skips that check. Config file is editable in Grix, and the daemon can be stopped or started in Grix.  [View on GitHub](https://github.com/bobbycomet/Process-Sentry)
+**WinBridge** — This was added to create an automated Bottles-like experience. However, this is much easier. Using profiles for Games, modded games, productivity, creative, and many more, this uses many Wine tools and Proton tools, gamemode, and mangohud to aid in building your workflow around the exe file. So, you just pick a profile, pick environment variables, a plugin system for advanced users, and it will handle the rest. Still in early development.
+
+**Sentry** — Smart resource manager using cgroups. Learns your usage habits over time for smoother multitasking. Fully customizable via `config.yaml` — every setting is reversible. Planned to be a part of Grix later for configuration, and a start button if the daemon fails. Sentry comes with Appify flags, so it never slows down your favorite apps, and comes with a config file, so you don't have to make one. Don't have the app? It skips that check. The config file is editable in Grix, and the daemon can be stopped or started in Grix.  [View on GitHub](https://github.com/bobbycomet/Process-Sentry)
 
 **kernel-autotune** — Detects your hardware (desktop vs laptop, RAM, kernel type) and applies smart baseline tweaks: Zram/Zswap, BBR TCP, governors, and more. Fully reversible via config file. Planned to be a part of Grix later for configuring and to check if it is working, with a button to start it if it fails at boot. Creates a config file and state.json. They record your system locally for Grix to understand the state of your system, and update it when there is a change. You can also edit the config in Grix, and you can start and stop in Grix. This even updates when you use XKM to change kernels. [View on GitHub](https://github.com/bobbycomet/kernel-autotune-V2)
 
@@ -230,7 +236,7 @@ No more forum-diving for driver fixes.
 
 **WIFI Hub** — A dedicated GUI for fixing the notorious Realtek WiFi issues that frustrate new Linux users. Grix will point you here if it detects your chip. Moved to be a part of Grix, which includes Broadcom drivers as well. Pairs well when you use an Xanmod Kernel through XKM, and Kernel autotune handles congestion and how fair the wifi is being used in the system.
 
-**GPU HUB** — Grix now detects your GPU (NVIDIA, AMD, or Intel), adds the right PPAs, and installs the optimal driver. Handles hardware brand switches by clicking "hardware swap", and it reverts to the basic drivers, so when you turn off, install the GPU, and boot back in, Grix sees the switch. Targeting RTX 50-series and RDNA4 support (in progress — manage expectations while this matures).
+**GPU HUB** — Detects your GPU (NVIDIA, AMD, or Intel). Handles hardware brand switches by clicking "hardware swap", and it reverts to the basic drivers, so when you turn off, install the GPU, and boot back in, use the Driver manager to choose your driver (it is being looked at if an automated tool will help here, and most likely will move in this direction). Targeting RTX 50-series and RDNA4 support (in progress — manage expectations while this matures).
 
 <div align="center">
   <img src="com.xanmod.kernel.manager.png" alt="XKM" width="25%"/>
