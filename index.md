@@ -2,11 +2,12 @@
   <img src="griffinlinux.png" alt="Griffin Linux" width="70%"/>
 
   <h1>Griffin Linux</h1>
-  <p><strong>The easiest way for Windows users to get a fast, no-nonsense Linux. With intelligent built-in help.</strong></p>
+  <p><strong>The easiest way for Windows users to get a fast, no-nonsense Linux experience. With intelligent built-in help.</strong></p>
   <p>No ads. No telemetry. No bloat. Just your PC, the way it should have always been.</p>
 
- <div align="center">
+<div align="center">
   <a href="https://discord.gg/7fEt5W7DPh" style="display:inline-block;padding:12px 24px;margin:6px;background:#5865F2;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold;">💬 Join Discord — Early Access</a>
+  <a href="https://griffin-linux.blogspot.com/" style="display:inline-block;padding:12px 24px;margin:6px;background:#FF6600;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold;">📝 Official Blog</a>
   <a href="https://www.patreon.com/c/BobbyComet" style="display:inline-block;padding:12px 24px;margin:6px;background:#FF424D;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold;">🎖️ Support on Patreon</a>
   <a href="https://ko-fi.com/bobby60908" style="display:inline-block;padding:12px 24px;margin:6px;background:#FF5E5B;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold;">☕ Ko-fi</a>
 </div>
@@ -15,295 +16,181 @@
 
 ---
 
----
-# Mission statement:
+## What is Griffin?
 
-**The mission is very simple. Make Linux usable by everyone, while keeping the soul of Linux. I'm not out to fix every possible failure point; that would be nearly impossible as Linux grows and upstream changes.**
+Linux has always been powerful. It just hasn't always been welcoming. Griffin is a layer built on top of Debian/Ubuntu systems, designed to reduce the friction of moving from Windows without hiding what Linux actually is.
 
-**Switching to Linux shouldn’t feel like rebuilding your computer from scratch.**
+You get the same desktop, package managers, drivers, and upstreams you would have anyway, with a coordinated set of tools on top that handle the things that usually send new users to forums: hardware quirks, driver setup, gaming performance, audio issues, and system health.
 
-**Griffin exists to make the move from Windows feel natural, safe, and frustration-free, while keeping everything that makes Linux powerful.**
+Griffin is not trying to deliver magic. It is designed to reduce the need to troubleshoot and to make the first months of using Linux feel like using a finished system rather than assembling one.
 
-**Most people don’t leave Windows because they suddenly want to become Linux experts.**
-They leave because they want control, privacy, performance, and a computer that feels like it belongs to them again.**
-
-**Griffin is designed for that.**
-
-**Instead of spending your first weeks fixing drivers, hunting through forums, and learning terminal commands just to make your PC usable, Griffin gives you a system that already understands your hardware, your workflows, and the things you actually want to do.**
-
-**Gaming. Streaming. Creating. Everyday computing.**
-
-**Linux stays powerful and fully open.**
-**But the first experience finally feels simple.**
+An official installer for the full Griffin tool suite is planned, so you will be able to bring Griffin to any compatible Debian/Ubuntu system without starting from scratch.
 
 ---
 
-## Why Griffin?
+## A note on platform direction
 
-Linux has always been powerful. It just hasn't always been welcoming. Griffin exists to close that gap, not by hiding Linux, but by making it approachable on day one, then getting out of your way. Griffin does not replace Kubuntu; it is a layer on top of Kubuntu. The same great Desktop, package managers, drivers, and upstreams, but with many more approachable features.
+Griffin's primary focus is on Debian and Ubuntu-based systems. This is a deliberate choice for reliability and maintainability. That said, several tools have a broader reach by their nature:
 
-- **Familiar from the start** — KDE desktop with a Windows 11-style layout, so nothing feels alien
-- **Grix is always there** — a built-in companion that diagnoses issues, suggests fixes, and explains what it's doing
-- **Gaming-ready out of the box** — GPU drivers, controller support, performance tuning, and Gamemode, handled automatically
-- **No telemetry, no forced updates, no subscriptions** — your machine, your rules
-- **Completely free and community-driven** — built in the open, shaped by users
+- **Appify** works across distros; it only creates a `.pwa_manager` file and detects whether X11, Wayland, or another display server is in use.
+- **WinBridge** has base support for KDE/Ubuntu/Kubuntu, with a plugin system that extends compatibility to other distros via community-contributed distro plugins.
+- **Sentry v3** is designed to run on any systemd-based Linux system.
+
+All other Griffin tools primarily target Debian/Ubuntu systems.
+
+> **Regarding a standalone Griffin distro:** Griffin has moved from a distro to a layer due to US legislation around age verification that would create serious complications for shipping a full Linux distribution. If that legislation is reversed or fails to pass, a Griffin distro will be revisited as an option. The tools, the vision, and the experience remain exactly the same.
 
 ---
 
-## Grix — Your Built-in Companion
+## How the pieces fit together
+
+Griffin is not a single app or control panel. It is a set of focused tools that each handle one job well, built to cooperate without you having to wire them together.
+
+**Sentry v3** watches running processes and learns your habits over time. Use an app regularly, and Sentry makes sure it is never throttled unless the system has no other choice. When it detects a gamemoded Steam launch via Game Tune Hub's wrappers, it automatically pulls back background processes to free up resources, while making sure tools like OBS are never touched so your stream stays smooth. Your current configuration is always visible inside Game Tune Hub; no file hunting required.
+
+**Kernel Autotune** handles low-level kernel settings at boot: Zram/Zswap, BBR TCP, governors, HDD optimization, and more. Its configuration is accessible inside Game Tune Hub if you need to review or reapply settings. Every kernel installed through XKM is automatically configured by Kernel Autotune, so switching kernels never leaves your system in an untuned state. Noatime Autotune handles SSD health separately.
+
+**Game Tune Hub** is where gaming performance comes together. It wraps Steam with Gamemode, Gamescope, and Mangohud without needing launch options, backs up your original Steam executable so everything is reversible, and gives you a single place to view and configure both Sentry v3 and Kernel Autotune settings.
+
+**Griffin Hub** brings together Controller Hub, CPU Hub, GPU Hub, and WiFi Hub. GPU Hub includes a hardware swap feature: if you switch to a GPU from a different brand, hit swap, and it safely reverts to base drivers, removing extras like CUDA, NVENC, or AMD ROCm, so nothing is left behind to cause conflicts. Once your new GPU is installed, use GPU Hub to install the right driver stack and any extras your hardware supports.
+
+**Fan Hub** stands alone. It is a deep rethinking of fan control on Linux, too large and complex to sit inside Griffin Hub. It handles fan curves, cooling profiles, liquidctl, OpenRGB (including AIOs, CPU fans, GPU fans, NVMe temps, RAM temps, and more), and runs headlessly by hooking into the OpenRGB server.
+
+**Grix** handles everything that does not belong to a dedicated tool: PipeWire fixes, drive health checks, capacity warnings with plain-language steps, and a learn function that helps you understand what is happening and why. When Grix spots a problem, it either walks you through fixing it or asks if you want it handled automatically. Everything is logged, so you can review or undo it.
+
+---
+
+## Core tools
+
+These are the tools that run quietly and keep everything working:
+
+**Sentry v3** learns your usage habits and manages background resource usage via cgroups. Gaming sessions are detected automatically through Game Tune Hub, background processes are pulled back, and critical tools are never touched. Configurable and visible inside Game Tune Hub. Runs on any systemd-based Linux system. [View on GitHub](https://github.com/bobbycomet/Process-Sentry)
+
+**Kernel Autotune** applies smart baseline tweaks at boot, handles HDD optimization, and automatically configures every kernel installed via XKM. Fully reversible, with settings accessible inside Game Tune Hub. [View on GitHub](https://github.com/bobbycomet/kernel-autotune-V2)
+
+**Noatime Autotune** runs quietly in the background, handling SSD health optimization. Nothing to configure.
+
+---
+
+## Gaming and performance
+
+**Game Tune Hub** wraps Steam with Gamemode, Gamescope, and Mangohud without needing per-game launch options. Your original Steam executable is backed up so changes are always reversible. Sentry v3 and Kernel Autotune settings are both configurable here, in one place.
+
+**WinBridge** automates Windows app workflows on Linux, combining ideas from Bottles and Lutris in a very different way. A profile system sets base Wine modules for your use case: games, modded games, productivity, creative work, and more. Additional modules can be added as needed. Sandboxing is built in, with an AST-based tier system so you choose how much protection each app gets. Includes a CLI and a plugin store for downloading community extensions. Base support targets KDE/Ubuntu/Kubuntu, with distro plugins available for other systems. Still in early development.
+
+---
+
+## Hardware and drivers
+
+**Griffin Hub** houses Controller Hub, CPU Hub, GPU Hub, and WiFi Hub in one place.
+
+**Controller Hub** auto-detects Xbox, PlayStation, Nintendo, and third-party controllers and wheels. Applies optimal profiles and firmware automatically. Xone and Xpad-noone are treated as a pair; conflicting drivers are blacklisted but swappable.
+
+**CPU Hub** gives you simple governor control: performance, balanced, or powersave. Kernel Autotune sets the baseline; CPU Hub lets you override it whenever you want.
+
+**GPU Hub** detects your GPU and manages your driver stack, including extras like CUDA, NVENC, and AMD ROCm. The hardware swap feature safely reverts to base drivers and removes extras when you switch GPU brands, so you can install the new stack cleanly. RTX 50-series and RDNA4 support is in progress.
+
+**WiFi Hub** handles Realtek and Broadcom driver fixes via a dedicated GUI. Pairs well with an Xanmod kernel installed through XKM.
+
+<div align="center">
+  <img src="com.xanmod.kernel.manager.png" alt="XKM" width="25%"/>
+</div>
+
+**XKM (Kernel Manager)** installs and manages Xanmod, Liquorix, and Mainline kernels. Handles DKMS rebuilds and unused kernel cleanup automatically (can be turned off). Every kernel XKM installs is configured by Kernel Autotune. Grix can recover DKMS if something goes wrong. [View on GitHub](https://github.com/bobbycomet/XKM-Multi-Kernel-Manager)
+
+<div align="center">
+  <img src="FanHub.png" alt="FanHub" width="25%"/>
+</div>
+
+**Fan Hub** is a standalone rethinking of fan control on Linux. Fan curves, cooling profiles, liquidctl, and OpenRGB integration covering AIOs, CPU fans, GPU fans, NVMe temps, RAM temps, and more. Runs headlessly via the OpenRGB server, so RGB and fan control work without OpenRGB open.
+
+---
+
+## Migration and productivity
+
+<div align="center">
+  <img src="migrate.png" alt="Griffin Migrate" width="25%"/>
+</div>
+
+**Griffin Migrate** is a GUI tool for transferring files, settings, and projects from Windows, including Unity and Unreal Engine setups.
+
+<div align="center">
+  <img src="Appify.png" alt="Appify" width="25%"/>
+</div>
+
+**Appify** turns any website into an isolated, native-feeling desktop app: Gmail, Twitch, Discord, cloud gaming services, and more. Sentry v3 includes flags so cloud gaming apps are never throttled. Works across distros; detects your display server automatically. [View on GitHub](https://github.com/bobbycomet/Appify)
+
+<div align="center">
+  <img src="postinstaller.png" alt="Griffin Persona" width="25%"/>
+</div>
+
+**Griffin Persona** lets you define your workflow and builds your desktop around it. Choose from curated profiles: Gaming, Productivity, Audio, System Tools, Streaming, General Use, or all of the above. It detects your hardware, so GPU drivers and extras like NVENC, CUDA, or AMD ROCm can be installed as part of your setup. Not tied to a fresh install; run it any time to set up or expand your workflow. A VTubing profile is planned.
+
+---
+
+## Grix: system health and support
 
 <div align="center">
   <img src="Grix.png" alt="Grix" width="40%"/>
   <p><i>System-aware. Transparent. Always on your side.</i></p>
 </div>
 
-Grix is the heart of Griffin. Instead of hunting through forums and Reddit threads when something breaks, Grix runs targeted checks and walks you through fixes — with your approval before anything changes. [Preview on GitHub before release](https://github.com/bobbycomet/Grix-Preview)
+Grix handles the things that fall outside dedicated tools; the issues that would otherwise send a new Linux user to forums or Reddit. It runs targeted checks, explains what it finds in plain language, and either walks you through a fix or asks if you want it handled. Everything is logged so you can review or undo any change.
 
-## **Update on Grix – Simplifying for Reliability**
-Grix is currently under a major review and rewrite. Its core had grown overly complicated, trying to handle too many things across too many different setups. So we've made some focused changes before the first stable release:
+Grix covers: PipeWire audio fixes, drive health monitoring, capacity warnings with plain-language steps, general system warnings, and a learn function that explains what Grix is doing and why.
 
-- Distro-agnostic features are being removed for now. Grix will focus tightly on Ubuntu-based systems with KDE Plasma (including Griffin Talon Edition and other Ubuntu flavors/spins). This makes it far more reliable and easier to maintain. Other Ubuntu spins and flavors will still benefit significantly from the improvements.
-
-- System health checks are being narrowed down. Other dedicated Griffin tools are now handling broader system optimization and health, so Grix can concentrate on the specific, high-frustration problems that fall outside those tools, the exact things that usually send new users to forums or Reddit.
- 
-- Process Sentry and Kernel Autotune have been moved into a new unified tool called Game Tune Hub. This keeps performance tuning clean and centralized.
-
-- Postinstaller will now handle environment and app bundle provisioning. Workflow-based automation (e.g., "I'm a gamer/streamer/VTuber") will occur after the first boot via simple user choices, rather than automatically detecting and configuring everything. Postinstaller will also now handle GPU brand driver support by detecting hardware and installing the drivers and extras needed. For example, RTX 20 series to RTX 50 series will use driver 580, GTX 900 and GTX 10 series will use drivers 535/550. Postinstaller does not support Legacy drivers like 470 for GTX 600/700. This is because Kubuntu no longer supports it, and Griffin is built on top of it.
-
-- All Hub tools have been moved to a new tool called **Griffin Hub.** This tool houses all Hub tools, Wifi Hub, GPU Hub, and so on. This is so tasks are handled, rather than having one tool do it all.
-
-These changes make Grix lighter, more predictable, and much more reliable, especially across varying kernels and tricky updates like PipeWire. The goal remains exactly the same: 
-
-- a local, transparent companion that spots real issues, explains them plainly, shows you exactly what it will do, asks for your approval, and logs everything so you can learn or undo changes.
-
-- Grix will still serve as the friendly control center that launches the right Griffin tool when needed and guides you through common headaches (hardware quirks, audio glitches, driver situations, etc.) without forcing you to become a terminal expert.
-
-We're taking the time to get this foundation solid because first impressions matter.
-
-Thanks for your patience. This rework will result in a much smoother and more trustworthy experience. The rest of Griffin (FanHub, XKM, Griffin Migrate, Appify, etc.) continues moving forward, and the overall vision of a frustration-free switch from Windows stays fully on track.
-
----
-## What this means for you
-
-On most Linux systems, you become the system failure investigator.
-
-You install tools, configure services, read guides, and slowly build a setup that works for your hardware and your workflow. Over time, you learn how the pieces fit together.
-
-Griffin changes that experience.
-
-Instead of becoming the investigator, you start with a system that already knows how its pieces fit:
-
-- When you install a GPU driver, the performance tools already know it exists.
-- When you launch a game, the system already knows what should pause and what should stay running.
-- When a background service fails silently, you don’t discover it weeks later; you get told immediately.
-- Grix is the layer that handles all the hard stuff
-
-You’re not learning Linux by fixing problems.
-You’re learning Linux while using a computer that already works.
-
-That difference sounds small, but it completely changes the first couple of months of using Linux.
-
-Griffin is designed so your first experience feels like using a finished operating system, not assembling one.
+Grix is currently under a major rewrite to make it lighter, more predictable, and more reliable across varying kernels and tricky updates. The goal is a tool that surfaces real problems clearly, handles the ones it can, and teaches you about your system along the way. [Preview on GitHub](https://github.com/bobbycomet/Grix-Preview)
 
 ---
 
-# How Griffin Works
-Griffin is a platform, not a bundle of tools
+## Griffin Updater
 
-Most Linux setups are a collection of independent utilities.
-You install tools one by one, hope they don’t conflict, and troubleshoot when something silently stops working.
+Griffin comes with a dedicated updater for all of its tools. It checks each tool's GitHub repo for updates and lets you update from a simple GUI, no terminal required. There is no auto-update by design; you choose when to update, so you can wait and see how a release lands before committing.
 
-Griffin is designed differently.
+If Griffin tools are not yet installed, Griffin Updater handles that too: click Install next to any tool, and it takes care of the rest. For tools available in both AppImage and Deb formats, choose your preference once, and the updater remembers it.
 
-Every core component is built to work together as one coordinated system, with Grix acting as the control center.
-
-The Griffin Architecture (Simple View)
-
-Griffin is built in layers that cooperate with each other:
-
-1) The Foundation — Stable, familiar Linux
-
-Griffin Talon Edition is built on Kubuntu LTS with KDE Plasma.
-You get long-term stability and a desktop that feels familiar from day one.
-
-2) The Automation Layer — Quiet background tuning
-
-Several lightweight services continuously keep your system optimized:
-
-- Process Sentry manages background resource usage
-- Kernel Autotune applies smart baseline performance tweaks
-- Noatime Autotune protects SSD health
-- Gamemode activates automatically when you play
-
-These tools run quietly, so you don’t have to think about them.
-
-3) The Hardware Layer — Dedicated problem solvers
-
-When hardware needs attention, Griffin provides focused tools designed for specific jobs:
-
-- ControllerHub for game controllers and wheels
-- FanHub for fan curves and cooling
-- CPU Hub for power and performance modes
-- WiFi Hub for Realtek and Broadcom fixes
-- GPU Hub for driver management and hardware swaps
-- XKM for advanced kernel management
-
-Each tool is specialized instead of being crammed into one giant app, and they still work together for a cohesive workflow that you either never notice or feel like you never need to be a Linux expert.
-
-4) The Workflow Layer — Living and working in Linux
-
-Griffin also includes tools that help you move in and stay productive:
-
-- Griffin Migrate moves your files and projects from Windows
-- Appify turns web apps into native desktop apps
-- Postinstaller installs curated software bundles in minutes
-
-5) Grix — The Control Center
-
-Grix sits above everything.
-
-Instead of forcing you to hunt through settings and forums, Grix:
-
-- Watches system health
-- Detects hardware and workflow states
-- Checks whether background services are running correctly
-- Suggests fixes and explains them before making changes
-- Launches the right tool when it’s needed
-- Keeps a readable history of every change
-
-Grix doesn’t try to replace the tools.
-It connects them and makes them work together.
-
-Why this matters
-
-Typical Linux troubleshooting looks like this:
-
-Install multiple tools manually
-Hope they start on boot
-Hope they don’t conflict
-Search forums when something breaks
-
-Griffin replaces that experience with a coordinated system that:
-
-- knows what tools are installed
-- knows what should be running
-- knows what you’re trying to do
-- helps when something isn’t right
-
-Griffin isn’t just preconfigured.
-It’s designed to keep working.
-
-**Griffin Updater** — To make things easier, Griffin will come with an updater for all of its tools. How this works is simple: it checks if the GitHub repos of each tool have an update, you get a notification, open the GUI, and update the highlighted tool. There will be no auto-update button. This is because you choose if you want to wait, see if the update works, and then update if you want. Previous versions will still work regardless. If you use AppImage, it just downloads the new AppImage, and you delete the old one. The reason for the manual deletion is that you might move the AppImage to another drive or file location. Instead of you having to browse just to have a cleanup feature, this keeps things simpler. The only cleanup feature will be for removing Deb files once the installation is done, and AppImages will have a feature built in when it has an update.
+AppImage tools (Deb also available where noted): Appify, Game Tune Hub, WinBridge, Griffin Hub, Grix, Fan Hub, Griffin Persona, and Griffin Updater itself. XKM currently has a Deb package with an AppImage coming.
 
 ---
 
-## Gaming & Performance Suite
+## Philosophy
 
-Everything tuned for smooth gameplay and responsive multitasking — no manual config required.
-
-<div align="center">
-  <img src="ControllerHub.png" alt="ControllerHub" width="25%"/>
-</div>
-
-**Controller Hub** — Auto-detects Xbox, PlayStation, Nintendo, and third-party controllers and wheels. Applies optimal profiles and firmware automatically. Moved to Grix, and has the same logic. Xone and Xpad-noone are treated as a pair; all others that conflict will be blacklisted, but can be swapped in Grix.
-
-<div align="center">
-  <img src="FanHub.png" alt="FanHub" width="25%"/>
-</div>
-
-**FanHub** — Windows-style fan curve editor with profiles with luquidctl and OpenRGB integration for not only peripherals, but AIOs, name-brand fans, CPU fans, GPU fans, NVME temps, RAM temps, and more. Runs without OpenRGB open as it hooks into the OpenRGB server. This means you can control RGB in Fan Hub. Runs as a standalone app (launched by Grix, the application's window, or with sudo fanhub, when your system needs it), but with the control of Linux, without ever needing to run commands.
-
-<div align="center">
-  <img src="CPUHub.png" alt="CPUHub" width="25%"/>
-</div>
-
-**CPU Hub** — Simple CPU governor control: performance, balanced, or powersave. Grix will alert you if it detects you're gaming in the wrong mode, switches to the one you need, and you can switch to the mode you want any time with performance, powersave, balanced, and so on profiles. Kernel Autotune sets the performance layer, but this will override the power, so you choose your performance.
-
-**Game Tune Hub** — What was formerly auto gamemode is no longer a silent script. Instead, this was evolved into Game Tune Hub. The difference? Instead of automatically detecting a game running and activating Gamemode, this will now use a GUI to back up your Steam executable, create wrappers that allow Steam to run with Gamemode without needing launch options like gamemoderun %command%. This goes for Gamescope and Mangohud as well. You can remove these in the GUI and restore the original steam with the backup file made.
-
-**WinBridge (not to be confused as Winebridge)** — This was added to create an automated Bottles-like experience. However, this is much easier. Using profiles for Games, modded games, productivity, creative, and many more, this uses many Wine tools and Proton tools, gamemode, and mangohud to aid in building your workflow around the exe file. So, you just pick a profile, pick environment variables, a plugin system for advanced users, and it will handle the rest. Still in early development. WinBride is to act as the bridge between Windows apps and Linux. 
-
-**Sentry** — Smart resource manager using cgroups. Learns your usage habits over time for smoother multitasking. Fully customizable via `config.yaml` — every setting is reversible. Planned to be a part of Grix later for configuration, and a start button if the daemon fails. Sentry comes with Appify flags, so it never slows down your favorite apps, and comes with a config file, so you don't have to make one. Don't have the app? It skips that check. The config file is editable in Grix, and the daemon can be stopped or started in Grix.  [View on GitHub](https://github.com/bobbycomet/Process-Sentry)
-
-**kernel-autotune** — Detects your hardware (desktop vs laptop, RAM, kernel type) and applies smart baseline tweaks: Zram/Zswap, BBR TCP, governors, and more. Fully reversible via config file. Planned to be a part of Grix later for configuring and to check if it is working, with a button to start it if it fails at boot. Creates a config file and state.json. They record your system locally for Grix to understand the state of your system, and update it when there is a change. You can also edit the config in Grix, and you can start and stop in Grix. This even updates when you use XKM to change kernels. [View on GitHub](https://github.com/bobbycomet/kernel-autotune-V2)
-
-**Noatime-autotune** — A simple, quiet SSD health optimization that runs in the background. Kernel autotune handles the HDD side.
-
----
-
-## Hardware & Driver Tools
-
-No more forum-diving for driver fixes.
-
-**WIFI Hub** — A dedicated GUI for fixing the notorious Realtek WiFi issues that frustrate new Linux users. Grix will point you here if it detects your chip. Moved to be a part of Grix, which includes Broadcom drivers as well. Pairs well when you use an Xanmod Kernel through XKM, and Kernel autotune handles congestion and how fair the wifi is being used in the system.
-
-**GPU HUB** — Detects your GPU (NVIDIA, AMD, or Intel). Handles hardware brand switches by clicking "hardware swap", and it reverts to the basic drivers, so when you turn off, install the GPU, and boot back in, use the Driver manager to choose your driver (it is being looked at if an automated tool will help here, and most likely will move in this direction). Targeting RTX 50-series and RDNA4 support (in progress — manage expectations while this matures).
-
-<div align="center">
-  <img src="com.xanmod.kernel.manager.png" alt="XKM" width="25%"/>
-</div>
-
-**XKM (Kernel Manager)** — Installs and manages Xanmod, Liquorix, and Mainline kernels. Handles DKMS rebuilds and unused kernel cleanup automatically (can be turned off). Launched from Grix for users who want to go deeper. Kernel autotune handles the swaps, and Grix can fix DKMS if XKM fails. [View on GitHub](https://github.com/bobbycomet/XKM-Multi-Kernel-Manager)
-
----
-
-## Migration & Productivity
-
-The move from Windows shouldn't mean starting from scratch.
-
-<div align="center">
-  <img src="migrate.png" alt="Griffin Migrate" width="25%"/>
-</div>
-
-**Griffin Migrate** — GUI tool to transfer files, settings, and projects, including Unity and Unreal Engine setups, from Windows.
-
-<div align="center">
-  <img src="Appify.png" alt="Appify" width="25%"/>
-</div>
-
-**Appify** — Turn any website into an isolated, native-feeling desktop app. Gmail, Twitch, Discord, cloud gaming services — no browser tab required. Process Sentry has flags to not slow down the cloud service games. Sentry flags make the experience much better and smoother. Particularly for cloud gaming. [View on GitHub](https://github.com/bobbycomet/Appify)
-
-<div align="center">
-  <img src="postinstaller.png" alt="Postinstaller" width="25%"/>
-</div>
-
-**Postinstaller** — One-click app bundles by category: Gaming, Productivity, Audio, System Tools, streaming, General Use, or all of the above. Everything you need after a fresh install, in minutes. Vtubing is a profile planned to be added soon. You create the desktop you want from the start.
-
----
-
-## Base & Philosophy
-
-Griffin Linux ships as the **Talon Edition** — built on the latest Kubuntu LTS release with custom theming, curated tools, and Griffin's full suite pre-installed.
-
-- **KDE Plasma desktop** styled to feel like Windows 11 from day one — taskbar, Start menu layout, familiar shortcuts
-- **Fully mutable** — the terminal is there, nothing is locked down, power users are welcome
-- **Privacy-first by default** — no telemetry baked in, no reporting home
-- **Reversible everything** — every Griffin tool that changes system settings has a way to undo it, either via GUI or config file
-
-Griffin doesn't hide Linux. It meets you where you are, then shows you what Linux can actually be.
+- **Not hiding Linux:** Griffin meets you where you are and shows you what Linux can be, without locking anything down
+- **Reversible by default:** Every Griffin tool that changes system settings can be undone, via GUI or config file
+- **Privacy first:** no telemetry, no reporting home
+- **Open and community-driven:** built in the open, shaped by the people who use it
 
 ---
 
 ## Roadmap
 
-- Grix stable release with core system checks and workflow fixes
+- Grix stable release
+- Official Griffin tool suite installer for Debian/Ubuntu systems
+- Griffin Persona stable release
 - Plugin system for Grix (post-stable)
 - Windows version of Appify
 - Expanded hardware tool coverage
-- More workflow presets (audio production, 3D/VFX, development)
-- Griffin updater, this will have every tool I made to work on many Ubuntu flavors beyond Griffin.
+- More workflow presets: audio production, 3D/VFX, development
+- Griffin Updater with full install and update support across Ubuntu-based systems
 
 ---
 
-## A bit about me:
+## A bit about me
 
-**Hi, I'm Bobby, and I was not originally planning on building Griffin. I started out by just making my own tools and scripts. Griffin was never the plan. I saw the early days of Linux back in 1999. I remember the early X11 issues, and even though Linux has come a very long way, it is still terminal-first. Ecosystems have a mental model of how Linux should be for them, and companies have their own interests they have to think about. I remember the 20-year-old promise made by Windows, and watched as they became a data farm. One day, while I was developing Appify, I came to a thought, "Shouldn't Linux be better?" Linux is powerful, and yet, it is fragmented; it has a culture based on the distro you choose. That is not welcoming to what Linux is or can be. So, I started looking into distros, what they provide, and what users love. That is why Griffin came to be. I used both Windows and Linux (I use Linux only now), so I know what the issues are in both, and why Linux scares you away. Griffin is here to make Linux feel like it is not so hard; it is here to make Linux a better OS, it is here not to replace Windows, but to replace an experience.**
+Hi, I'm Bobby. I started out building my own tools and scripts; Griffin was never the original plan. I've been watching Linux since 1999, and I've used both Windows and Linux long enough to understand why the switch feels hard. Linux is powerful, but it's fragmented, and its culture can make newcomers feel like outsiders before they've even started.
 
-## Get Involved
+Griffin came from a simple thought I had while working on Appify: shouldn't Linux be better at this? Not more powerful; it already is. Better at welcoming people in without making them feel like they have to earn it first.
+
+That's what this is. Not a replacement for Windows. A replacement for the experience that drives people away from Linux before they ever see what it can do.
+
+---
+
+## Get involved
 
 Griffin is shaped by the people who use it. Early feedback directly changes what gets built next.
 
 - **Discord** (early access, updates, feedback): [Join here](https://discord.gg/7fEt5W7DPh)
+- **Official Blog** (project news and updates): [Read here](https://griffin-linux.blogspot.com/)
 - **Patreon** (early builds + support development): [Support here](https://www.patreon.com/c/BobbyComet)
 - **Ko-fi** (one-time support): [Donate here](https://ko-fi.com/bobby60908)
 
