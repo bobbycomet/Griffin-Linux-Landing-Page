@@ -74,9 +74,9 @@ These are the tools that run quietly and keep everything working:
 
 ## Gaming and performance
 
-**Game Tune Hub** wraps Steam with Gamemode, Gamescope, and Mangohud without needing per-game launch options. Your original Steam executable is backed up so changes are always reversible. Sentry v3 and Kernel Autotune settings are both configurable here, in one place.
+**Game Tune Hub** wraps Steam with Gamemode, Gamescope, and Mangohud without needing per-game launch options. Your original Steam executable is backed up, so changes are always reversible. Sentry v3 and Kernel Autotune settings are both configurable here, in one place.
 
-**WinBridge** automates Windows app workflows on Linux, combining ideas from Bottles and Lutris in a very different way. A profile system sets base Wine modules for your use case: games, modded games, productivity, creative work, and more. Additional modules can be added as needed. Sandboxing is built in, with an AST-based tier system so you choose how much protection each app gets. Includes a CLI and a plugin store for downloading community extensions. Base support targets KDE/Ubuntu/Kubuntu, with distro plugins available for other systems. Still in early development.
+**WinBridge** automates Windows app workflows on Linux, combining ideas from Bottles and Lutris in a very different way. A profile system sets base Wine modules for your use case: games, modded games, productivity, creative work, and more. Additional modules can be added as needed. Plugin sandboxing is built in, with an AST-based tier system, so you choose how much protection each app gets. Includes a CLI and a plugin store for downloading community extensions. Base support targets KDE/Ubuntu/Kubuntu, with distro plugins available for other systems. Still in early development.
 
 ---
 
@@ -135,7 +135,7 @@ These are the tools that run quietly and keep everything working:
   <p><i>System-aware. Transparent. Always on your side.</i></p>
 </div>
 
-Grix handles the things that fall outside dedicated tools; the issues that would otherwise send a new Linux user to forums or Reddit. It runs targeted checks, explains what it finds in plain language, and either walks you through a fix or asks if you want it handled. Everything is logged so you can review or undo any change.
+Grix handles the things that fall outside dedicated tools; the issues that would otherwise send a new Linux user to forums or Reddit. It runs targeted checks, explains what it finds in plain language, and either walks you through a fix or asks if you want it handled. Everything is logged, so you can review or undo any change.
 
 Grix covers: PipeWire audio fixes, drive health monitoring, capacity warnings with plain-language steps, general system warnings, and a learn function that explains what Grix is doing and why.
 
