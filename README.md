@@ -20,7 +20,7 @@
 
 Linux has always been powerful. It just hasn't always been welcoming. Griffin is a layer built on top of Debian/Ubuntu systems, designed to reduce the friction of moving from Windows without hiding what Linux actually is.
 
-You get the same desktop, package managers, drivers, and upstreams you'd have anyway — plus a coordinated set of tools on top that handle the things that usually send new users to forums: hardware quirks, driver setup, gaming performance, audio issues, and system health.
+You get the same desktop, package managers, drivers, and upstreams you'd have anyway, plus a coordinated set of tools on top that handle the things that usually send new users to forums: hardware quirks, driver setup, gaming performance, audio issues, and system health.
 
 Griffin isn't trying to deliver magic. It's designed to cut down on troubleshooting and make the first months of using Linux feel like using a finished system, not assembling one.
 
@@ -30,7 +30,7 @@ An official installer for the full Griffin tool suite is planned, so you'll be a
 
 ## Platform direction
 
-Griffin's primary focus is Debian and Ubuntu-based systems — a deliberate choice for reliability and maintainability. A few tools reach further by nature:
+Griffin's primary focus is Debian and Ubuntu-based systems, a deliberate choice for reliability and maintainability. A few tools reach further by nature:
 
 - **Appify** works across distros; it only creates a `.pwa_manager` file and detects whether you're on X11, Wayland, or something else.
 - **WinBridge** has base support for KDE/Ubuntu/Kubuntu, with a plugin system that extends compatibility to other distros via community-contributed plugins. Many tools have been moved to WinBridge.
@@ -47,9 +47,9 @@ Everything else targets Debian/Ubuntu.
 Griffin isn't one app or control panel — it's a set of focused tools that each handle one job well, built to cooperate without you having to wire anything together.
 
 - **Sentry v3** watches what's running and learns your habits, pulling back background processes during gaming sessions while making sure tools like OBS are never touched.
-- **Kernel Autotune** handles the low-level kernel settings — Zram/Zswap, BBR TCP, governors, HDD optimization — and automatically configures every kernel installed through XKM.
+- **Kernel Autotune** handles the low-level kernel settings, Zram/Zswap, BBR TCP, governors, HDD optimization, and automatically configures every kernel installed through XKM.
 - **Game Tune Hub** brings it together for gaming: one place to wrap Steam in Gamemode/Gamescope/Mangohud and view your Sentry and Kernel Autotune settings.
-- **Griffin Hub** brings hardware control — controllers, CPU, GPU, WiFi — into one place.
+- **Griffin Hub** brings hardware control, controllers, CPU, GPU, and WiFi into one place.
 - **Fan Hub** stands on its own; fan and RGB control turned out to be too large to fit inside Griffin Hub.
 - **Grix** catches everything else: PipeWire fixes, drive health, capacity warnings, and a learn function that explains what's happening and why.
 
@@ -61,17 +61,17 @@ Full details on each tool are below.
 
 These run quietly in the background and keep everything else working.
 
-**Sentry v3** — learns your usage habits and manages background resource use via cgroups. Detects gaming sessions automatically through Game Tune Hub, pulls back background processes, and never touches critical tools like OBS. Configurable and visible inside Game Tune Hub. Runs on any systemd-based Linux system. [View on GitHub](https://github.com/bobbycomet/Process-Sentry)
+**Sentry v3** learns your usage habits and manages background resource use via cgroups. Detects gaming sessions automatically through Game Tune Hub, pulls back background processes, and never touches critical tools like OBS. Configurable and visible inside Game Tune Hub. Runs on any systemd-based Linux system. [View on GitHub](https://github.com/bobbycomet/Process-Sentry)
 
-**Kernel Autotune** — applies smart baseline tweaks at boot, handles HDD optimization, and automatically configures every kernel installed via XKM. Fully reversible, with settings accessible inside Game Tune Hub. [View on GitHub](https://github.com/bobbycomet/kernel-autotune-V2)
+**Kernel Autotune** applies smart baseline tweaks at boot, handles HDD optimization, and automatically configures every kernel installed via XKM. Fully reversible, with settings accessible inside Game Tune Hub. [View on GitHub](https://github.com/bobbycomet/kernel-autotune-V2)
 
 ---
 
 ## Gaming and performance
 
-**Game Tune Hub — moved to WinBridge** — wraps Steam with Gamemode, Gamescope, and Mangohud; no per-game launch options required. Backs up your original Steam executable so changes are always reversible. Sentry v3 and Kernel Autotune settings are both configurable here, in one place.
+**Game Tune Hub — moved to WinBridge** wraps Steam with Gamemode, Gamescope, and Mangohud; no per-game launch options required. Backs up your original Steam executable so changes are always reversible. Sentry v3 and Kernel Autotune settings are both configurable here, in one place.
 
-**WinBridge** — automates Windows app workflows on Linux, combining ideas from Bottles and Lutris in a different way. A profile system sets base Wine modules for your use case — games, modded games, productivity, creative work, and more — and you can add modules as needed. Plugin sandboxing is built in, with an AST-based tier system so you choose how much protection each app gets. Includes a CLI and a plugin store for community extensions. Base support targets KDE/Ubuntu/Kubuntu, with distro plugins for other systems. Still in early development.
+**WinBridge** automates Windows app workflows on Linux, combining ideas from Bottles and Lutris in a different way. A profile system sets base Wine modules for your use case. Games, modded games, productivity, creative work, and more, and you can add modules as needed. Plugin sandboxing is built in, with an AST-based tier system so you choose how much protection each app gets. Includes a CLI and a plugin store for community extensions. Base support targets KDE/Ubuntu/Kubuntu, with distro plugins for other systems. Still in early development.
 
 ---
 
@@ -79,16 +79,16 @@ These run quietly in the background and keep everything else working.
 
 **Griffin Hub — moved to WinBridge** houses Controller Hub, CPU Hub, GPU Hub, and WiFi Hub in one place.
 
-- **Controller Hub** — auto-detects Xbox, PlayStation, Nintendo, and third-party controllers and wheels, and applies optimal profiles and firmware automatically. Xone and xpad-noone are treated as a pair; conflicting drivers are blacklisted but swappable.
-- **CPU Hub** — simple governor control: performance, balanced, or powersave. Kernel Autotune sets the baseline; CPU Hub lets you override it anytime.
-- **GPU Hub** — detects your GPU and manages your driver stack, including extras like CUDA, NVENC, and AMD ROCm. The hardware swap feature safely reverts to base drivers and removes extras when you switch GPU brands, so you can install the new stack clean. RTX 50-series and RDNA4 support is in progress.
-- **WiFi Hub** — handles Realtek and Broadcom driver fixes via a dedicated GUI. Pairs well with an Xanmod kernel installed through XKM.
+- **Controller Hub** auto-detects Xbox, PlayStation, Nintendo, and third-party controllers and wheels, and applies optimal profiles and firmware automatically. Xone and xpad-noone are treated as a pair; conflicting drivers are blacklisted but swappable.
+- **CPU Hub** simple governor control: performance, balanced, or powersave. Kernel Autotune sets the baseline; CPU Hub lets you override it anytime.
+- **GPU Hub** detects your GPU and manages your driver stack, including extras like CUDA, NVENC, and AMD ROCm. The hardware swap feature safely reverts to base drivers and removes extras when you switch GPU brands, so you can install the new stack clean. RTX 50-series and RDNA4 support is in progress.
+- **WiFi Hub** handles Realtek and Broadcom driver fixes via a dedicated GUI. Pairs well with an Xanmod kernel installed through XKM.
 
 <div align="center">
   <img src="com.xanmod.kernel.manager.png" alt="XKM" width="25%"/>
 </div>
 
-**XKM (Kernel Manager)** — installs and manages Xanmod, Liquorix, and Mainline kernels. Handles DKMS rebuilds and unused kernel cleanup automatically (can be turned off). Every kernel XKM installs is configured by Kernel Autotune. Grix can recover DKMS if something goes wrong. [View on GitHub](https://github.com/bobbycomet/XKM-Multi-Kernel-Manager)
+**XKM (Kernel Manager)** installs and manages Xanmod, Liquorix, and Mainline kernels. Handles DKMS rebuilds and unused kernel cleanup automatically (can be turned off). Every kernel XKM installs is configured by Kernel Autotune. Grix can recover DKMS if something goes wrong. [View on GitHub](https://github.com/bobbycomet/XKM-Multi-Kernel-Manager)
 
 <div align="center">
   <img src="FanHub.png" alt="FanHub" width="25%"/>
