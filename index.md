@@ -153,7 +153,7 @@ These run quietly in the background and keep everything else working.
 
 
 <div align="center">
-  <img width="1254" height="1254" alt="GriffinPersona" src="https://github.com/user-attachments/assets/0ac35f56-5176-43a5-a654-def31d4e0ef8" />
+  <img width="300" height="300" alt="GriffinPersona" src="https://github.com/user-attachments/assets/0ac35f56-5176-43a5-a654-def31d4e0ef8" width="40%"/>
 </div>
 
 **Griffin Persona** — Griffin's welcome app. You pick one or more personas: Gaming, Productivity, Audio, System Tools, Streaming, General Use; each one is a complete workflow, and Persona configures your desktop to match. Pick a single persona, or select them all at once. It also detects your hardware, so GPU drivers and extras like NVENC, CUDA, or AMD ROCm install automatically as part of the setup. Not tied to a fresh install, run it any time to set up or expand a workflow. A VTubing persona is planned.
