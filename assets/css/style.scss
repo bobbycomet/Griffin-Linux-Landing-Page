@@ -1,0 +1,13 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+section img,
+img {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  margin: 15px auto !important;
+  border: 1px solid #444;
+}
