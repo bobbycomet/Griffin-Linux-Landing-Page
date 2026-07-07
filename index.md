@@ -69,27 +69,26 @@ Griffin isn't one app or control panel; it's a set of focused tools that each ha
 - **Griffin Updater** evolved from Discord Updater. Checks an `apps.json` for a catalog, checks version numbers of debs/AppImages that are not in official apt repos and updates them accordingly.
 
 Full details on each tool are below.
-
-                    Griffin
-
-          ┌──────────────────────┐
-          │   Griffin Updater    │
-          └──────────┬───────────┘
-                     │
-     ┌───────────────┼────────────────┐
-     │               │                │
-Griffin Hub      Grix          Griffin Persona
-     │               │                │
-     │               │                │
-Hardware        Troubleshooting   Initial Setup
-Gaming          Learning          Workflow
-Drivers         Diagnostics       Profiles
-
-          ┌─────────────────────┐
-          │  Kernel Autotune     │
-          │      Sentry          │
-          └─────────────────────┘
-
+```ascii
+                                      Griffin
+                          ┌──────────────────────────────┐
+                          │        Griffin Persona       │
+                          └──────────────┬───────────────┘
+                                  Griffin Updater
+               ┌─────────────────────────┼─────────────────────────┐
+               │                         │                         │
+         Griffin Hub                   Grix                 Griffin Persona
+               │                         │                         │
+       ┌───────┴───────┐         ┌───────┴───────┐         ┌───────┴───────┐
+       │               │         │               │         │               │
+ Hardware Troubleshooting   Initial Setup     Gaming       Learning       Workflow
+       │               │                         │            │
+     Drivers        Diagnostics                 Profiles
+                          │
+               ┌──────────┴──────────┐
+               │                     │
+         Kernel Autotune           Sentry
+```
 ---
 
 ## Core tools
