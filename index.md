@@ -16,7 +16,7 @@
   <a href="https://ko-fi.com/bobby60908" style="display:inline-block;padding:8px 18px;margin:4px;background:#FF5E5B;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold;font-size:0.9em;">☕ Ko-fi</a>
 </div>
 
-  <sub>⚠️ Griffin Linux is currently in active development. Features shown are in progress. Join Discord to follow along and get early access. Griffin is not affiliated with Ubuntu/Kubuntu or Canonical.</sub>
+  <sub>⚠️ Griffin Linux tools have been released. Some features shown are in progress. Join Discord to follow along and get early access. Griffin is not affiliated with Ubuntu/Kubuntu or Canonical.</sub>
 </div>
 
 ---
@@ -51,7 +51,7 @@ Griffin's primary focus is Debian and Ubuntu-based systems, a deliberate choice 
 
 Everything else targets Debian/Ubuntu.
 
-> **On a standalone Griffin distro:** Griffin moved from being a distro to being a layer because of US legislation around age verification, which would create serious complications for shipping a full Linux distribution. If that legislation is reversed or fails to pass, a Griffin distro is back on the table. The tools, the vision, and the experience stay exactly the same either way.
+> **On a standalone Griffin distro:** Griffin is a layer that acts as a unifier for many different things that would typically need the terminal. A Distro for Griffin is in the works now that much of the geopolitics has since been cleared up. As for the tools, they can be dropped into almost any Ubuntu-based distro. Griffin primarily distributes its tools as AppImages. This allows a single build to work across supported Ubuntu-based distributions without requiring users to add third-party repositories or manage repository keys. Griffin Updater provides centralized installation and updates, giving a consistent experience while keeping the base system's package sources unchanged. No release date for the distro as of now.
 
 ---
 
@@ -69,6 +69,26 @@ Griffin isn't one app or control panel; it's a set of focused tools that each ha
 - **Griffin Updater** evolved from Discord Updater. Checks an `apps.json` for a catalog, checks version numbers of debs/AppImages that are not in official apt repos and updates them accordingly.
 
 Full details on each tool are below.
+
+                    Griffin
+
+          ┌──────────────────────┐
+          │   Griffin Updater    │
+          └──────────┬───────────┘
+                     │
+     ┌───────────────┼────────────────┐
+     │               │                │
+Griffin Hub      Grix          Griffin Persona
+     │               │                │
+     │               │                │
+Hardware        Troubleshooting   Initial Setup
+Gaming          Learning          Workflow
+Drivers         Diagnostics       Profiles
+
+          ┌─────────────────────┐
+          │  Kernel Autotune     │
+          │      Sentry          │
+          └─────────────────────┘
 
 ---
 
@@ -202,7 +222,7 @@ Griffin ships with a dedicated updater for all of its tools. It checks each tool
 If a Griffin tool isn't installed yet, Griffin Updater handles that too. Click Install next to any tool, and it takes care of the rest. For tools available in both AppImage and Deb formats, choose your preference once, and the updater remembers it.
 
 - **AppImage** (Deb also available where noted): Appify, Griffin Hub, Grix, Fan Hub, Griffin Updater, XKM
-- **Deb only (for now)**: Griffin Persona
+- **Deb only (for now)**: Griffin Persona, Sentry, Kernel Autotune
 
 <img width="1920" height="1080" alt="Screenshot_20260705_102109" src="https://github.com/user-attachments/assets/3d746432-5077-4a36-9b0e-96358928af93" />
 <img width="1920" height="1080" alt="Screenshot_20260705_102056" src="https://github.com/user-attachments/assets/fe0c9a88-b50b-4dec-9cc5-f45673696ef6" />
