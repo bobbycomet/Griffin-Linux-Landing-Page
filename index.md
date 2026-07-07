@@ -76,15 +76,15 @@ Full details on each tool are below.
 
 These run quietly in the background and keep everything else working.
 
-**Sentry v3** learns your usage habits and manages background resource use via cgroups. Detects gaming sessions automatically through Game Tune Hub, pulls back background processes, and never touches critical tools like OBS. Configurable and visible inside Game Tune Hub. Runs on any systemd-based Linux system. [View on GitHub](https://github.com/bobbycomet/Process-Sentry)
+**[Sentry v3](https://github.com/bobbycomet/Process-Sentry)** learns your usage habits and manages background resource use via cgroups. Detects gaming sessions automatically through Game Tune Hub, pulls back background processes, and never touches critical tools like OBS. Configurable and visible inside Game Tune Hub. Runs on any systemd-based Linux system.
 
-**Kernel Autotune** applies smart baseline tweaks at boot, handles HDD optimization, and automatically configures every kernel installed via XKM. Fully reversible, with settings accessible inside Game Tune Hub. [View on GitHub](https://github.com/bobbycomet/kernel-autotune-V2)
+**[Kernel Autotune](https://github.com/bobbycomet/kernel-autotune-V2)** applies smart baseline tweaks at boot, handles HDD optimization, and automatically configures every kernel installed via XKM. Fully reversible, with settings accessible inside Game Tune Hub.
 
 ---
 
 ## Hardware and drivers: Gaming and performance
 
-**Griffin Hub** houses Controller Hub, CPU Hub, GPU Hub, and WiFi Hub in one place. Following the retirement of the standalone WinBridge tool, Wine automation was dropped. WinBridge's Wine automation didn't scale the way it needed to, so that work is being folded into Griffin Hub instead.
+**[Griffin Hub](https://github.com/bobbycomet/Griffin-Hub)** houses Controller Hub, CPU Hub, GPU Hub, and WiFi Hub in one place. Following the retirement of the standalone WinBridge tool, Wine automation was dropped. WinBridge's Wine automation didn't scale the way it needed to, so that work is being folded into Griffin Hub instead.
 
 - **Dashboard** has graphs, temps, and more. This is an at-a-glance dashboard and does not replace KDE's system monitor.
 - **System Tune** wraps Steam with Gamemode, Gamescope, and Mangohud; no per-game launch options required. Backs up your original Steam executable so changes are always reversible. Sentry v3 and Kernel Autotune settings are both configurable here, in one place.
@@ -111,7 +111,7 @@ These run quietly in the background and keep everything else working.
   <img src="com.xanmod.kernel.manager.png" alt="XKM" width="25%"/>
 </div>
 
-**XKM (Kernel Manager)** installs and manages Xanmod, Liquorix, and Mainline kernels. Handles DKMS rebuilds and unused kernel cleanup automatically (can be turned off). Every kernel XKM installs is configured by Kernel Autotune. Grix can recover DKMS if something goes wrong. [View on GitHub](https://github.com/bobbycomet/XKM-Multi-Kernel-Manager)
+**[XKM](https://github.com/bobbycomet/XKM-Multi-Kernel-Manager) (Kernel Manager)** installs and manages Xanmod, Liquorix, and Mainline kernels. Handles DKMS rebuilds and unused kernel cleanup automatically (can be turned off). Every kernel XKM installs is configured by Kernel Autotune. Grix can recover DKMS if something goes wrong. [View on GitHub](https://github.com/bobbycomet/XKM-Multi-Kernel-Manager)
 
 <img width="1920" height="1080" alt="Screenshot_20260705_115852" src="https://github.com/user-attachments/assets/b6f78ee4-9dd2-40e3-a806-71c41d395ce7" />
 <img width="1920" height="1080" alt="Screenshot_20260705_115841" src="https://github.com/user-attachments/assets/79bcf2e9-5987-4ae6-9a65-5055801a0746" />
@@ -122,7 +122,7 @@ These run quietly in the background and keep everything else working.
   <img src="FanHub.png" alt="FanHub" width="25%"/>
 </div>
 
-**Fan Hub** — a standalone rethinking of fan control on Linux: fan curves, cooling profiles, liquidctl, and OpenRGB integration covering AIOs, CPU fans, GPU fans, NVMe temps, RAM temps, and more. Runs headlessly via the OpenRGB server, so RGB and fan control work without OpenRGB open.
+**[Fan Hub](https://github.com/bobbycomet/Fan-Hub)** — a standalone rethinking of fan control on Linux: fan curves, cooling profiles, liquidctl, and OpenRGB integration covering AIOs, CPU fans, GPU fans, NVMe temps, RAM temps, and more. Runs headlessly via the OpenRGB server, so RGB and fan control work without OpenRGB open.
 
 <img width="1920" height="1080" alt="Screenshot_20260705_115557" src="https://github.com/user-attachments/assets/2c252f86-7f9e-4a7f-9fb7-fb321312a53c" />
 <img width="1920" height="1080" alt="Screenshot_20260705_115523" src="https://github.com/user-attachments/assets/3d9cb89b-9bc9-4a02-826d-24e2ee03858f" />
@@ -145,7 +145,7 @@ These run quietly in the background and keep everything else working.
   <img src="Appify.png" alt="Appify" width="25%"/>
 </div>
 
-**Appify** — turns any website into an isolated, native-feeling desktop app: Gmail, Twitch, Discord, cloud gaming services, and more. Sentry v3 flags cloud gaming apps so they're never throttled. Works across distros and detects your display server automatically. [View on GitHub](https://github.com/bobbycomet/Appify)
+**[Appify](https://github.com/bobbycomet/Appify)** — turns any website into an isolated, native-feeling desktop app: Gmail, Twitch, Discord, cloud gaming services, and more. Sentry v3 flags cloud gaming apps so they're never throttled. Works across distros and detects your display server automatically. [View on GitHub](https://github.com/bobbycomet/Appify)
 
 <img width="1920" height="1080" alt="Screenshot_20260703_053801" src="https://github.com/user-attachments/assets/7d0b29b3-70fd-4a31-a03c-a1c1b1962d8f" />
 <img width="1920" height="1080" alt="Screenshot_20260703_053734" src="https://github.com/user-attachments/assets/af3dc7b0-45e5-4322-a994-cae64cf61554" />
@@ -168,7 +168,7 @@ These run quietly in the background and keep everything else working.
 
 ---
 
-## Grix: system health and support
+## [Grix](https://github.com/bobbycomet/Grix): system health and support
 
 <div align="center">
   <img src="Grix.png" alt="Grix" width="40%"/>
@@ -195,7 +195,7 @@ Grix is currently under a major rewrite to make it lighter, more predictable, an
 
 ---
 
-## Griffin Updater
+## [Griffin Updater](https://github.com/bobbycomet/GriffinUpdater)
 
 Griffin ships with a dedicated updater for all of its tools. It checks each tool's GitHub repo for updates and lets you update from a simple GUI, no terminal required. There's no auto-update by design; you choose when to update, so you can see how a release lands before committing.
 
