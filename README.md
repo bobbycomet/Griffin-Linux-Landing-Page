@@ -2,7 +2,7 @@
   <img src="griffinlinux.png" alt="Griffin Linux" width="70%"/>
 
   <h1>Griffin Linux</h1>
-  <p><strong>Linux that feels like Windows — but faster, smarter, and it actually teaches you how to use it.</strong></p>
+  <p><strong>Linux that feels like Windows, but faster, smarter, and it actually teaches you how to use it.</strong></p>
   <p>No ads. No telemetry. No bloat. Just your PC, the way it should have always been.</p>
 
 <div align="center">
@@ -84,7 +84,7 @@ These run quietly in the background and keep everything else working.
 
 ## Hardware and drivers: Gaming and performance
 
-**Griffin Hub** houses Controller Hub, CPU Hub, GPU Hub, and WiFi Hub in one place — and is also where Wine/Proton support now lives, following the retirement of the standalone WinBridge tool. WinBridge's Wine automation didn't scale the way it needed to, so that work is being folded into Griffin Hub instead.
+**Griffin Hub** houses Controller Hub, CPU Hub, GPU Hub, and WiFi Hub in one place. Following the retirement of the standalone WinBridge tool, Wine automation was dropped. WinBridge's Wine automation didn't scale the way it needed to, so that work is being folded into Griffin Hub instead.
 
 - **Dashboard** has graphs, temps, and more. This is an at-a-glance dashboard and does not replace KDE's system monitor.
 - **System Tune** wraps Steam with Gamemode, Gamescope, and Mangohud; no per-game launch options required. Backs up your original Steam executable so changes are always reversible. Sentry v3 and Kernel Autotune settings are both configurable here, in one place.
@@ -201,8 +201,8 @@ Griffin ships with a dedicated updater for all of its tools. It checks each tool
 
 If a Griffin tool isn't installed yet, Griffin Updater handles that too. Click Install next to any tool, and it takes care of the rest. For tools available in both AppImage and Deb formats, choose your preference once, and the updater remembers it.
 
-- **AppImage** (Deb also available where noted): Appify, Griffin Hub, Grix, Fan Hub, Griffin Updater
-- **Deb only (for now)**: Griffin Persona, XKM — AppImage coming
+- **AppImage** (Deb also available where noted): Appify, Griffin Hub, Grix, Fan Hub, Griffin Updater, XKM
+- **Deb only (for now)**: Griffin Persona
 
 <img width="1920" height="1080" alt="Screenshot_20260705_102109" src="https://github.com/user-attachments/assets/3d746432-5077-4a36-9b0e-96358928af93" />
 <img width="1920" height="1080" alt="Screenshot_20260705_102056" src="https://github.com/user-attachments/assets/fe0c9a88-b50b-4dec-9cc5-f45673696ef6" />
