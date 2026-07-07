@@ -70,20 +70,20 @@ Griffin isn't one app or control panel; it's a set of focused tools that each ha
 
 Full details on each tool are below.
 ```ascii
-                                      Griffin
+                                      
                           ┌──────────────────────────────┐
-                          │        Griffin Persona       │
+                          │        Griffin Linux         │
                           └──────────────┬───────────────┘
                                   Griffin Updater
                ┌─────────────────────────┼─────────────────────────┐
                │                         │                         │
-         Griffin Hub                   Grix                 Griffin Persona
+         Griffin Hub              Griffin Persona                Grix
                │                         │                         │
        ┌───────┴───────┐         ┌───────┴───────┐         ┌───────┴───────┐
        │               │         │               │         │               │
- Hardware Troubleshooting   Initial Setup     Gaming       Learning       Workflow
+ Hardware           Drivers   Initial Setup     Gaming    Learning      Troubleshooting
        │               │                         │            │
-     Drivers        Diagnostics                 Profiles
+                    Diagnostics                 Profiles    
                           │
                ┌──────────┴──────────┐
                │                     │
