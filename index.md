@@ -16,7 +16,7 @@
   <a href="https://ko-fi.com/bobby60908" style="display:inline-block;padding:8px 18px;margin:4px;background:#FF5E5B;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold;font-size:0.9em;">☕ Ko-fi</a>
 </div>
 
-  <sub>⚠️ Griffin Linux tools have been released. Some features shown are in progress. Join Discord to follow along and get early access. Griffin is not affiliated with Ubuntu/Kubuntu or Canonical.</sub>
+  <sub>✅ Griffin Linux tools are out now and installable today. The Griffin distro is in active development. Join Discord to follow along and get early access. Griffin is not affiliated with Ubuntu/Kubuntu or Canonical.</sub>
 </div>
 
 ---
@@ -38,20 +38,24 @@ You get the same desktop, package managers, drivers, and upstreams you'd have an
 
 Griffin isn't trying to deliver magic. It's designed to cut down on troubleshooting and make the first months of using Linux feel like using a finished system, not assembling one.
 
-An official installer for the full Griffin tool suite is planned, so you'll be able to bring Griffin to any compatible Debian/Ubuntu system without starting from scratch.
+The full Griffin tool suite is available now, tool by tool, and can be installed on any supported system through Griffin Updater. From here, the project's main focus shifts to building a dedicated Griffin distro, with the existing tools continuing to receive security and bug fixes along the way.
 
 ---
 
 ## Platform direction
 
-Griffin's primary focus is Debian and Ubuntu-based systems, a deliberate choice for reliability and maintainability. A few tools reach further by nature:
+Griffin's primary focus going forward is a standalone, Kubuntu-based Griffin distro. That's where new feature work is concentrated. The individual Griffin tools you can install today are not going away: they'll keep getting security patches and bug fixes, and most of them work well beyond Ubuntu.
 
-- **Appify** works across distros; it only creates a `.appify` file and detects whether you're on X11, Wayland, or something else.
+**The Griffin distro:** built on Kubuntu, and in active development now that much of the groundwork around it has settled. It's meant to be the cleanest way to get the full Griffin experience out of the box, with Griffin Updater providing centralized installation and updates so the base system's package sources stay untouched. No release date yet.
+
+**The Griffin ecosystem:** every tool is designed to work across Ubuntu-based systems, and several reach further by nature:
+
+- **Fan Hub** runs on Ubuntu, Arch, Fedora, and any systemd-based distro.
+- **Appify** runs almost anywhere: Debian-based systems (Ubuntu, Linux Mint, Pop!_OS, Zorin OS, elementary OS, Debian itself), RPM-based systems (Fedora, openSUSE, Nobara — via the AppImage), Arch-based systems (Arch Linux, Manjaro, EndeavourOS — via the AppImage), independent distros (NixOS, Void Linux), and most other modern systemd-based distros via the AppImage.
+- **Grix** and **Griffin Hub** both support plugins to extend their functionality. Grix plugins are also how support for other distros gets added, so the tool can grow beyond Ubuntu/Debian as the community builds for it.
 - **Sentry v3** runs on any systemd-based Linux system.
 
-Everything else targets Debian/Ubuntu.
-
-> **On a standalone Griffin distro:** Griffin is a layer that acts as a unifier for many different things that would typically need the terminal. A Distro for Griffin is in the works now that much of the geopolitics has since been cleared up. As for the tools, they can be dropped into almost any Ubuntu-based distro. Griffin primarily distributes its tools as AppImages. This allows a single build to work across supported Ubuntu-based distributions without requiring users to add third-party repositories or manage repository keys. Griffin Updater provides centralized installation and updates, giving a consistent experience while keeping the base system's package sources unchanged. No release date for the distro as of now.
+Everything else targets Debian/Ubuntu-based systems.
 
 ---
 
@@ -64,8 +68,8 @@ Griffin isn't one app or control panel; it's a set of focused tools that each ha
 - **Kernel Autotune** handles the low-level kernel settings, Zram/Zswap, BBR TCP, governors, HDD optimization, and automatically configures every kernel installed through XKM. It creates a config that can be edited and a state.json that is seen by other applications for system information and hardware information.
 - **System Tune** evolved from Game Tune Hub and brings the system together for gaming: one place to wrap Steam in Gamemode/Gamescope/Mangohud and view your Sentry and Kernel Autotune settings, and you can configure them. If Kernel Autotune is not installed, a new tab is used that replicates what Kernel Autotune does, but not to the full extent.
 - **Hardware Hub** brings hardware control, GitHub and stock kernel controllers (GitHub controllers: Xone, xpadneo, paroj/xpad, sim wheels with hid-tmff2), CPU, GPU, and WiFi (fixes Broadcom and Realtek common driver issues) into one place. Also a part of Griffin Hub.
-- **Fan Hub** stands on its own; fan and RGB control turned out to be too large to fit inside Griffin Hub. It replicates a Windows-like experience with fan control and RGB control.
-- **Grix** catches everything else: PipeWire fixes, drive health, capacity warnings, and a learn function that explains what's happening and why. Grix reads the `state.json` and gives you the system information in the GUI.
+- **Fan Hub** stands on its own; fan and RGB control turned out to be too large to fit inside Griffin Hub. It replicates a Windows-like experience with fan control and RGB control, and runs on Ubuntu, Arch, Fedora, and any systemd-based distro.
+- **Grix** catches everything else: PipeWire fixes, drive health, capacity warnings, and a learn function that explains what's happening and why. Grix reads the `state.json` and gives you the system information in the GUI. Grix supports plugins, which is also the path for extending distro support beyond Ubuntu/Debian.
 - **Griffin Updater** evolved from Discord Updater. Checks an `apps.json` for a catalog, checks version numbers of debs/AppImages that are not in official apt repos and updates them accordingly.
 
 Full details on each tool are below.
@@ -103,7 +107,7 @@ These run quietly in the background and keep everything else working.
 
 ## Hardware and drivers: Gaming and performance
 
-**[Griffin Hub](https://github.com/bobbycomet/Griffin-Hub)** houses Controller Hub, CPU Hub, GPU Hub, and WiFi Hub in one place. Following the retirement of the standalone WinBridge tool, Wine automation was dropped. WinBridge's Wine automation didn't scale the way it needed to, so that work is being folded into Griffin Hub instead.
+**[Griffin Hub](https://github.com/bobbycomet/Griffin-Hub)** houses Controller Hub, CPU Hub, GPU Hub, and WiFi Hub in one place, and supports plugins to extend what it covers. Following the retirement of the standalone WinBridge tool, Wine automation was dropped. WinBridge's Wine automation didn't scale the way it needed to, so that work is being folded into Griffin Hub instead.
 
 - **Dashboard** has graphs, temps, and more. This is an at-a-glance dashboard and does not replace KDE's system monitor.
 - **System Tune** wraps Steam with Gamemode, Gamescope, and Mangohud; no per-game launch options required. Backs up your original Steam executable so changes are always reversible. Sentry v3 and Kernel Autotune settings are both configurable here, in one place.
@@ -141,7 +145,7 @@ These run quietly in the background and keep everything else working.
   <img src="FanHub.png" alt="FanHub" width="25%"/>
 </div>
 
-**[Fan Hub](https://github.com/bobbycomet/Fan-Hub)** — a standalone rethinking of fan control on Linux: fan curves, cooling profiles, liquidctl, and OpenRGB integration covering AIOs, CPU fans, GPU fans, NVMe temps, RAM temps, and more. Runs headlessly via the OpenRGB server, so RGB and fan control work without OpenRGB open.
+**[Fan Hub](https://github.com/bobbycomet/Fan-Hub)** — a standalone rethinking of fan control on Linux: fan curves, cooling profiles, liquidctl, and OpenRGB integration covering AIOs, CPU fans, GPU fans, NVMe temps, RAM temps, and more. Runs headlessly via the OpenRGB server, so RGB and fan control work without OpenRGB open. Works on Ubuntu, Arch, Fedora, and any systemd-based distro.
 
 <img width="1920" height="1080" alt="Screenshot_20260705_115557" src="https://github.com/user-attachments/assets/2c252f86-7f9e-4a7f-9fb7-fb321312a53c" />
 <img width="1920" height="1080" alt="Screenshot_20260705_115523" src="https://github.com/user-attachments/assets/3d9cb89b-9bc9-4a02-826d-24e2ee03858f" />
@@ -164,7 +168,14 @@ These run quietly in the background and keep everything else working.
   <img src="Appify.png" alt="Appify" width="25%"/>
 </div>
 
-**[Appify](https://github.com/bobbycomet/Appify)** — turns any website into an isolated, native-feeling desktop app: Gmail, Twitch, Discord, cloud gaming services, and more. Sentry v3 flags cloud gaming apps so they're never throttled. Works across distros and detects your display server automatically. [View on GitHub](https://github.com/bobbycomet/Appify)
+**[Appify](https://github.com/bobbycomet/Appify)** — turns any website into an isolated, native-feeling desktop app: Gmail, Twitch, Discord, cloud gaming services, and more. Sentry v3 flags cloud gaming apps so they're never throttled. Appify has the widest reach of any Griffin tool, and detects your display server automatically:
+
+- Debian-based: Ubuntu, Linux Mint, Pop!_OS, Zorin OS, elementary OS, Debian
+- RPM-based: Fedora, openSUSE, Nobara (via AppImage)
+- Arch-based: Arch Linux, Manjaro, EndeavourOS (via AppImage)
+- Independent: NixOS, Void Linux, and most other modern systemd-based distros (via AppImage)
+
+[View on GitHub](https://github.com/bobbycomet/Appify)
 
 <img width="1920" height="1080" alt="Screenshot_20260703_053801" src="https://github.com/user-attachments/assets/7d0b29b3-70fd-4a31-a03c-a1c1b1962d8f" />
 <img width="1920" height="1080" alt="Screenshot_20260703_053734" src="https://github.com/user-attachments/assets/af3dc7b0-45e5-4322-a994-cae64cf61554" />
@@ -196,9 +207,7 @@ These run quietly in the background and keep everything else working.
 
 Grix handles the things that fall outside dedicated tools — the issues that would otherwise send a new Linux user to forums or Reddit. It runs targeted checks, explains what it finds in plain language, and either walks you through a fix or asks if you want it handled. Everything is logged, so you can review or undo any change.
 
-Grix covers: PipeWire audio fixes, drive health monitoring, capacity warnings with plain-language steps, general system warnings, and a learn function that explains what Grix is doing and why.
-
-Grix is currently under a major rewrite to make it lighter, more predictable, and more reliable across varying kernels and tricky updates. The goal is a tool that surfaces real problems clearly, handles the ones it can, and teaches you about your system along the way. [Preview on GitHub](https://github.com/bobbycomet/Grix-Preview)
+Grix covers: PipeWire audio fixes, drive health monitoring, capacity warnings with plain-language steps, general system warnings, and a learn function that explains what Grix is doing and why. Grix supports plugins, and this is also the mechanism for extending Grix's checks to distros outside Ubuntu/Debian as the community builds support for them.
 
 <img width="1920" height="1080" alt="Screenshot_20260622_050511" src="https://github.com/user-attachments/assets/15203761-3bf6-4f61-9d69-be1052815adb" />
 <img width="1920" height="1080" alt="Screenshot_20260622_050459" src="https://github.com/user-attachments/assets/778a5cb4-f406-4cfd-b07a-1aaeb0fb4aa2" />
@@ -240,14 +249,14 @@ If a Griffin tool isn't installed yet, Griffin Updater handles that too. Click I
 
 ## Roadmap
 
-- Grix stable release
-- Official Griffin tool suite installer for Debian/Ubuntu systems
-- Griffin Persona stable release
-- Plugin system for Grix (post-stable)
+- Griffin distro (Kubuntu-based) — the project's main focus going forward
 - Windows version of Appify
-- Expanded hardware tool coverage
-- More workflow presets: audio production, 3D/VFX, development
-- Griffin Updater with full install and update support across Ubuntu-based systems
+
+---
+
+## License
+
+The entire Griffin ecosystem is licensed under GPLv3. All Griffin images, artwork, and names are owned by the Griffin Linux project and are not covered by that license.
 
 ---
 
