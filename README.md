@@ -247,10 +247,12 @@ If a Griffin tool isn't installed yet, Griffin Updater handles that too. Click I
 
 ---
 
+>**NOTE:** Conky Studio is not a part of the Griffin lineup. While it does help make desktop customizations easier and shares a similar philosophy as the Griffin Linux Project by being a layer to make something easier on Linux. It is its own platform, as it uses [Conky](https://github.com/brndnmtthws/conky, a well-established and powerful project to do so. It is not affiliated or endorsed by the Conky developer or its maintainers; it is a third-party standalone tool with its own evolving platform. You can check [Conky Studio out here](https://github.com/bobbycomet/Conky-Studio)
+
 ## Roadmap
 
 - Griffin distro (Kubuntu-based) — the project's main focus going forward
-- Windows version of Appify
+- Windows version of Appify (in progress)
 
 ---
 
