@@ -40,6 +40,8 @@ Griffin isn't trying to deliver magic. It's designed to cut down on troubleshoot
 
 The full Griffin tool suite is available now, tool by tool, and can be installed on any supported system through Griffin Updater. The project's focus going forward is expanding that support: taking tools that currently lean on Ubuntu/Debian and bringing them to more distros over time, while the tools that are already distro-agnostic keep receiving security and bug fixes along the way.
 
+Griffin and all tools listed are owned by the Comet UX Labs (CUXL) branding. Griffin is a child UX layer under that parent branding.
+
 ---
 
 ## Platform direction
@@ -261,6 +263,8 @@ If a Griffin tool isn't installed yet, Griffin Updater handles that too. Click I
 ---
 
 >**NOTE:** Conky Studio is not a part of the Griffin lineup. While it does help make desktop customizations easier and shares a similar philosophy as the Griffin Linux Project by being a layer to make something easier on Linux, it is its own platform, as it uses [Conky](https://github.com/brndnmtthws/conky), a well-established and powerful project to do so. It remains a separate project for trademark and licensing reasons, out of respect for the Conky project. It is not affiliated or endorsed by the Conky developer or its maintainers; it is a third-party standalone tool with its own evolving platform. You can check [Conky Studio out here](https://github.com/bobbycomet/Conky-Studio)
+>
+>[Kalium](https://github.com/bobbycomet/Kalium) also follows the same not a part of Griffin philosophy. Kalium is a modified fork of the archived [NaK](https://github.com/SulfurNitride/NaK) project, now [Flourine Manager](https://github.com/SulfurNitride/Fluorine-Manager). Kalium is a complete rewrite, not just a fork, the entire code was changed from Rust to Python as a PyQt6 AppImage that sets the environment up and does not control MO2. The difference between Kalium and Flourine is that Flourine is using Fuse, while Kalium uses Wine/Proton, and supports the older NaK MO2 instances with a migration tool. While Kalium works well with the Griffin tools, its job is outside of the core philosophy as a specialized tool for modders. Which is why it shares similar reasons as Conky Studio for not being in the line up. Kalium just benefits from Griffin. While Kalium is in the 1.0.0 Beta phase, the 1.1.0 version is coming fast.
 
 ## Roadmap
 
