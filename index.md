@@ -260,6 +260,16 @@ If a Griffin tool isn't installed yet, Griffin Updater handles that too. Click I
 - **Privacy first** — no telemetry, no reporting home
 - **Open and community-driven** — built in the open, shaped by the people who use it
 
+CUXL and Griffin share a philosophy, but they serve different purposes.
+
+Comet UX Labs (CUXL) is the broader design philosophy behind projects that build abstraction layers around powerful Linux technologies: making them approachable without hiding what is actually happening underneath.
+
+Griffin Linux applies that philosophy specifically to the Linux desktop and system experience. Its goal is to make Griffin's tools usable across as many Linux distributions as possible, while respecting the differences between those environments rather than flattening them into a single platform.
+
+Where a Griffin tool depends on distro-specific commands, package managers, init systems, or system interfaces, those differences are handled through platform-specific implementations or plugins. Other tools, such as Appify and Fan Hub, are already sufficiently distro-agnostic that they can operate across distributions without that additional abstraction layer.
+
+In other words, CUXL defines the philosophy; Griffin defines one application of that philosophy.
+
 ---
 
 >**NOTE:** Conky Studio is not a part of the Griffin lineup. While it does help make desktop customizations easier and shares a similar philosophy as the Griffin Linux Project by being a layer to make something easier on Linux, it is its own platform, as it uses [Conky](https://github.com/brndnmtthws/conky), a well-established and powerful project to do so. It remains a separate project for trademark and licensing reasons, out of respect for the Conky project. It is not affiliated or endorsed by the Conky developer or its maintainers; it is a third-party standalone tool with its own evolving platform. You can check [Conky Studio out here](https://github.com/bobbycomet/Conky-Studio)
