@@ -66,6 +66,9 @@ Beyond that, the existing reach of Griffin's tools already varies:
 - **Appify** runs almost anywhere: Debian-based systems (Ubuntu, Linux Mint, Pop!_OS, Zorin OS, elementary OS, Debian itself), RPM-based systems (Fedora, openSUSE, Nobara, via the AppImage), Arch-based systems (Arch Linux, Manjaro, EndeavourOS, via the AppImage), independent distros (NixOS, Void Linux), and most other modern systemd-based distros via the AppImage.
 - **Grix** and **Griffin Hub** both support plugins to extend their functionality. Grix plugins are also how support for other distros gets added, so the tool can grow beyond Ubuntu/Debian as the community builds for it.
 - **Sentry** runs on any systemd-based Linux system.
+- And soon, Griffin Play. A ProtonDB game compatibility tool. Choose your game, see if it runs Natively, of it already plays without any launch commands. Games that need anti-cheat, certain packages, and launch commands, and give you the Proton version needed, this will configure that game according to system hardware and distro comparisons on Proton DB. Easy one click fix, or advanced mode for more technical users.
+>**NOTE:** Griffin play will only tell you the Proton needed, you will still need to download the Proton needed by using Proton-QT. This will attempt to download it for you, but as tools evolve, the app can fall behind, but will recieve updates. 
+- A tool to help with streaming is also in the works, so be on the lookout.
 
 Everything else currently targets Debian/Ubuntu-based systems, with broader support planned as each tool's architecture allows for it.
 
@@ -260,7 +263,7 @@ If a Griffin tool isn't installed yet, Griffin Updater handles that too. Click I
 - **Privacy first** — no telemetry, no reporting home
 - **Open and community-driven** — built in the open, shaped by the people who use it
 
-CUXL and Griffin share a philosophy, but they serve different purposes.
+## CUXL and Griffin share a philosophy, but they serve different purposes.
 
 Comet UX Labs (CUXL) is the broader design philosophy behind projects that build abstraction layers around powerful Linux technologies: making them approachable without hiding what is actually happening underneath.
 
