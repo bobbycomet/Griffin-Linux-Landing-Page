@@ -125,11 +125,13 @@ These run quietly in the background and keep everything else working.
 **[Griffin Hub](https://github.com/bobbycomet/Griffin-Hub)** houses Controller Hub, CPU Hub, GPU Hub, and WiFi Hub in one place, and supports plugins to extend what it covers. Following the retirement of the standalone WinBridge tool, Wine automation was dropped. WinBridge's Wine automation didn't scale the way it needed to, so that work is being folded into Griffin Hub instead. Griffin Hub is currently the most tightly integrated with Ubuntu of any Griffin tool, and bringing it to other distros is the biggest architectural project ahead for the ecosystem.
 
 - **Dashboard** has graphs, temps, and more. This is an at-a-glance dashboard and does not replace KDE's system monitor.
-- **System Tune** wraps Steam with Gamemode, Gamescope, and Mangohud; no per-game launch options required. Backs up your original Steam executable so changes are always reversible. Sentry and Kernel Autotune settings are both configurable here, in one place.
+- **System Tune** wraps Steam with Gamemode, Gamescope, and Mangohud; no per-game launch options required. Backs up your original Steam executable so changes are always reversible. Sentry and Kernel Autotune settings are both configurable here, in one place, and installed from here as well.
+- **Griffin Play and Gaming Tweaks** Play allows you to automate ProtonDB settings from real user reports, use a "make it work" one button click, or advanced options. Teaks allow you to set up an isolated environment for Windows games with a launcher, all automated for you.
 - **Controller Hub** auto-detects Xbox, PlayStation, Nintendo, and third-party controllers and wheels, and applies optimal profiles and firmware automatically. Xone and xpad-noone are treated as a pair; conflicting drivers are blacklisted but swappable.
 - **CPU Hub** simple governor control: performance, balanced, or powersave. Kernel Autotune sets the baseline; CPU Hub lets you override it anytime.
 - **GPU Hub** detects your GPU and manages your driver stack, including extras like CUDA, NVENC, and AMD ROCm. The hardware swap feature safely reverts to base drivers and removes extras when you switch GPU brands, so you can install the new stack clean. RTX 50-series and RDNA4 support is in progress.
 - **WiFi Hub** handles Realtek and Broadcom driver fixes via a dedicated GUI. Pairs well with an Xanmod kernel installed through XKM.
+- Arch, Debian, Fedora, and OpenSUSE support (derivatives of all 4 included in the support), with other distros falling into generic.
 
 <img width="1920" height="1080" alt="Screenshot_20260705_120157" src="https://github.com/user-attachments/assets/88ba64be-fe09-4b2d-9fb7-30d076566589" />
 <img width="1920" height="1080" alt="Screenshot_20260705_120145" src="https://github.com/user-attachments/assets/4c4dc25c-4505-4838-815d-6683272630ca" />
@@ -148,6 +150,8 @@ These run quietly in the background and keep everything else working.
 <div align="center">
   <img src="com.xanmod.kernel.manager.png" alt="XKM" width="25%"/>
 </div>
+
+> XKM is moving to LTS as GKM will be the successor of XKM. More info will be provided when released.
 
 **[XKM](https://github.com/bobbycomet/XKM-Multi-Kernel-Manager) (Kernel Manager)** installs and manages Xanmod, Liquorix, and Mainline kernels. Handles DKMS rebuilds and unused kernel cleanup automatically (can be turned off). Every kernel XKM installs is configured by Kernel Autotune. Grix can recover DKMS if something goes wrong. Currently Ubuntu-focused, with plans to add support for more kernel flavors — such as Zen and CachyOS; as support for other distros grows. [View on GitHub](https://github.com/bobbycomet/XKM-Multi-Kernel-Manager)
 
